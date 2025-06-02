@@ -1,0 +1,423 @@
+---
+// src/components/FAQ.astro
+// Composant FAQ avec mentions Airtable et questions clés
+---
+
+<section class="bg-white py-20 lg:py-32">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                Questions <span class="gradient-text">fréquentes</span>
+            </h2>
+            <p class="text-xl text-gray-600">
+                Toutes les réponses sur ZestCRM et Airtable
+            </p>
+        </div>
+
+        <div class="space-y-4">
+            <!-- FAQ 1: C'est vraiment gratuit ? -->
+            <div class="faq-item bg-gray-50 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-gray-100">
+                <button class="faq-trigger w-full text-left p-6 focus:outline-none" data-faq-id="1">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-gray-900 pr-4">
+                            💰 C'est vraiment gratuit à vie ?
+                        </h3>
+                        <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                </button>
+                <div class="faq-content hidden px-6 pb-6">
+                    <div class="text-gray-700 leading-relaxed">
+                        <p class="mb-4"><strong>Oui, votre CRM sera gratuit !</strong> Il sera basé sur <strong>Airtable</strong>, plateforme utilisée par +300k entreprises (Netflix, Airbnb, BuzzFeed...).</p>
+                        
+                        <div class="bg-blue-50 rounded-lg p-4 mb-4">
+                            <h4 class="font-semibold text-blue-800 mb-2">🛡️ Airtable c'est quoi ?</h4>
+                            <ul class="text-blue-700 text-sm space-y-1">
+                                <li>• Excel en 10x plus puissant + interface moderne</li>
+                                <li>• Gratuit jusqu'à 1200 enregistrements (= 1200 clients)</li>
+                                <li>• Si vous grandissez : 20$/mois (vs 80€+ pour les autres CRM)</li>
+                                <li>• Sécurité enterprise, sauvegarde automatique</li>
+                            </ul>
+                        </div>
+                        
+                        <p><strong>Aucun abonnement ZestCRM</strong> - vous payez juste la formation une fois !</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 2: Pourquoi Airtable et pas Excel ? -->
+            <div class="faq-item bg-gray-50 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-gray-100">
+                <button class="faq-trigger w-full text-left p-6 focus:outline-none" data-faq-id="2">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-gray-900 pr-4">
+                            🤔 Pourquoi Airtable et pas Excel ?
+                        </h3>
+                        <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                </button>
+                <div class="faq-content hidden px-6 pb-6">
+                    <div class="text-gray-700 leading-relaxed">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-semibold text-red-600 mb-3">❌ Excel c'est...</h4>
+                                <ul class="space-y-2 text-sm">
+                                    <li>• Bugs et plantages fréquents</li>
+                                    <li>• Pas de sauvegarde automatique</li>
+                                    <li>• Impossible à plusieurs</li>
+                                    <li>• Pas d'automatisations</li>
+                                    <li>• Interface années 90</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-green-600 mb-3">✅ Airtable c'est...</h4>
+                                <ul class="space-y-2 text-sm">
+                                    <li>• Ultra-stable, jamais de perte</li>
+                                    <li>• Sauvegarde cloud temps réel</li>
+                                    <li>• Collaboration en équipe</li>
+                                    <li>• Automatisations puissantes</li>
+                                    <li>• Interface moderne et intuitive</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="mt-4 text-center font-medium">
+                            <span class="text-zest-600">Airtable = Excel sans les inconvénients !</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 3: Et si je n'y arrive pas ? -->
+            <div class="faq-item bg-gray-50 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-gray-100">
+                <button class="faq-trigger w-full text-left p-6 focus:outline-none" data-faq-id="3">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-gray-900 pr-4">
+                            😰 Et si je n'y arrive pas ?
+                        </h3>
+                        <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                </button>
+                <div class="faq-content hidden px-6 pb-6">
+                    <div class="text-gray-700 leading-relaxed">
+                        <p class="mb-4"><strong>Nos clients de 65 ans y arrivent !</strong> Airtable est aussi simple qu'une messagerie moderne.</p>
+                        
+                        <div class="bg-green-50 rounded-lg p-4 mb-4">
+                            <h4 class="font-semibold text-green-800 mb-2">🎓 Notre accompagnement :</h4>
+                            <ul class="text-green-700 space-y-1">
+                                <li>• Formation pas-à-pas en petit groupe (max 8 personnes)</li>
+                                <li>• Guide vidéo pour réviser chez vous</li>
+                                <li>• Support chat pendant 30 jours minimum</li>
+                                <li>• Communauté d'entraide entre utilisateurs</li>
+                            </ul>
+                        </div>
+                        
+                        <p><strong>Et si vraiment vous bloquez ?</strong> On peut basculer vers la formule "Done For You" en payant juste la différence. <span class="text-zest-600">Zéro risque !</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 4: Mon métier est-il supporté ? -->
+            <div class="faq-item bg-gray-50 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-gray-100">
+                <button class="faq-trigger w-full text-left p-6 focus:outline-none" data-faq-id="4">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-gray-900 pr-4">
+                            🔨 Mon métier est-il supporté ?
+                        </h3>
+                        <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                </button>
+                <div class="faq-content hidden px-6 pb-6">
+                    <div class="text-gray-700 leading-relaxed">
+                        <p class="mb-4">Nous avons déjà créé des templates pour <strong>20+ métiers</strong> :</p>
+                        
+                        <div class="grid md:grid-cols-3 gap-4 mb-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">🔧 Artisans</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• Plombiers</li>
+                                    <li>• Électriciens</li>
+                                    <li>• Menuisiers</li>
+                                    <li>• Maçons</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">🏠 Services</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• Agents immobiliers</li>
+                                    <li>• Consultants</li>
+                                    <li>• Coachs</li>
+                                    <li>• Formateurs</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">💼 Autres</h4>
+                                <ul class="text-sm space-y-1">
+                                    <li>• Thérapeutes</li>
+                                    <li>• Photographes</li>
+                                    <li>• Commerçants</li>
+                                    <li>• Et bien d'autres...</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-orange-50 rounded-lg p-4">
+                            <p class="text-orange-800"><strong>Votre métier n'y est pas ?</strong> On crée votre template pendant la formation ! Chaque métier a ses spécificités qu'on prend en compte.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 5: Import données existantes -->
+            <div class="faq-item bg-gray-50 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-gray-100">
+                <button class="faq-trigger w-full text-left p-6 focus:outline-none" data-faq-id="5">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-gray-900 pr-4">
+                            📥 Puis-je importer mes données actuelles ?
+                        </h3>
+                        <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                </button>
+                <div class="faq-content hidden px-6 pb-6">
+                    <div class="text-gray-700 leading-relaxed">
+                        <p class="mb-4"><strong>Absolument !</strong> Airtable importe facilement depuis :</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">📊 Formats supportés :</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li>• Excel (.xlsx, .xls)</li>
+                                    <li>• CSV (tout logiciel)</li>
+                                    <li>• Google Sheets</li>
+                                    <li>• Autres CRM (export)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-900 mb-2">🎯 On vous aide à :</h4>
+                                <ul class="space-y-1 text-sm">
+                                    <li>• Nettoyer vos données</li>
+                                    <li>• Structurer correctement</li>
+                                    <li>• Éviter les doublons</li>
+                                    <li>• Optimiser l'organisation</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <p class="bg-blue-50 rounded-lg p-3 text-blue-800">
+                            <strong>Formule "Done For You" :</strong> On s'occupe de tout l'import et le nettoyage pendant que vous travaillez !
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 6: Évolutions et mises à jour -->
+            <div class="faq-item bg-gray-50 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-gray-100">
+                <button class="faq-trigger w-full text-left p-6 focus:outline-none" data-faq-id="6">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-gray-900 pr-4">
+                            🔄 Et les mises à jour ?
+                        </h3>
+                        <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                </button>
+                <div class="faq-content hidden px-6 pb-6">
+                    <div class="text-gray-700 leading-relaxed">
+                        <p class="mb-4"><strong>C'est vous qui contrôlez !</strong> Contrairement aux CRM classiques :</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-semibold text-red-600 mb-3">❌ CRM classiques</h4>
+                                <ul class="space-y-2 text-sm">
+                                    <li>• Mises à jour imposées</li>
+                                    <li>• Interface qui change</li>
+                                    <li>• Nouvelles fonctions payantes</li>
+                                    <li>• Risque de bugs</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-green-600 mb-3">✅ Votre CRM Airtable</h4>
+                                <ul class="space-y-2 text-sm">
+                                    <li>• Vous évoluez quand vous voulez</li>
+                                    <li>• Interface stable</li>
+                                    <li>• Améliorations selon VOS besoins</li>
+                                    <li>• Airtable gère la technique</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 bg-green-50 rounded-lg p-4">
+                            <p class="text-green-800"><strong>Bonus :</strong> Notre communauté partage régulièrement de nouvelles idées d'améliorations que vous pouvez adopter (ou ignorer) !</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ 7: Différence avec CRM traditionnels -->
+            <div class="faq-item bg-gray-50 rounded-2xl overflow-hidden transition-all duration-300 hover:bg-gray-100">
+                <button class="faq-trigger w-full text-left p-6 focus:outline-none" data-faq-id="7">
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-lg font-semibold text-gray-900 pr-4">
+                            ⚖️ Différence avec Salesforce, HubSpot... ?
+                        </h3>
+                        <svg class="faq-icon w-6 h-6 text-gray-500 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </div>
+                </button>
+                <div class="faq-content hidden px-6 pb-6">
+                    <div class="text-gray-700 leading-relaxed">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-sm">
+                                <thead>
+                                    <tr class="border-b border-gray-200">
+                                        <th class="text-left py-2 font-semibold">Critère</th>
+                                        <th class="text-center py-2 font-semibold text-red-600">CRM Traditionnels</th>
+                                        <th class="text-center py-2 font-semibold text-green-600">ZestCRM</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="space-y-2">
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-2 font-medium">Prix 5 ans</td>
+                                        <td class="text-center py-2">4800€+</td>
+                                        <td class="text-center py-2">690€</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-2 font-medium">Spécialisation métier</td>
+                                        <td class="text-center py-2">❌ Générique</td>
+                                        <td class="text-center py-2">✅ Sur-mesure</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-2 font-medium">Vos données</td>
+                                        <td class="text-center py-2">❌ Prisonnières</td>
+                                        <td class="text-center py-2">✅ Libres</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-2 font-medium">Formation</td>
+                                        <td class="text-center py-2">❌ Complexe</td>
+                                        <td class="text-center py-2">✅ 4h suffisent</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 font-medium">Évolutions</td>
+                                        <td class="text-center py-2">❌ Imposées</td>
+                                        <td class="text-center py-2">✅ Contrôlées</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <p class="mt-4 text-center font-medium text-zest-600">
+                            ZestCRM = Même résultat, 7x moins cher, 10x plus adapté !
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA après FAQ -->
+        <div class="text-center mt-16">
+            <div class="bg-gradient-to-r from-zest-50 to-orange-50 rounded-2xl p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-4">
+                    Encore des questions ?
+                </h3>
+                <p class="text-gray-600 mb-6">
+                    Réservez une consultation gratuite pour discuter de votre situation spécifique
+                </p>
+                <button onclick="bookMeeting()" class="bg-zest-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-zest-600 transition-colors">
+                    📞 Consultation gratuite (30 min)
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .gradient-text {
+        background: linear-gradient(135deg, #f97316, #ea580c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .faq-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .faq-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+    }
+    
+    .faq-content.show {
+        max-height: 1000px;
+        transition: max-height 0.5s ease-in;
+    }
+    
+    @media (max-width: 768px) {
+        .faq-trigger h3 {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<script is:inline>
+    // Utiliser is:inline pour s'assurer que le script est inclus directement dans la page
+    document.addEventListener('DOMContentLoaded', function() {
+        // Ajouter des écouteurs d'événements à tous les boutons FAQ
+        document.querySelectorAll('.faq-trigger').forEach((button) => {
+            button.addEventListener('click', function() {
+                const faqId = this.getAttribute('data-faq-id');
+                if (faqId) {
+                    // Trouver le contenu et l'icône directement à partir du bouton cliqué
+                    const container = this.closest('.faq-item');
+                    if (!container) return;
+                    
+                    const content = container.querySelector('.faq-content');
+                    const icon = this.querySelector('.faq-icon');
+                    
+                    if (!content || !icon) return;
+                    
+                    // Fermer toutes les autres FAQ
+                    document.querySelectorAll('.faq-content').forEach(faq => {
+                        if (faq !== content) {
+                            faq.classList.remove('show');
+                            faq.classList.add('hidden');
+                        }
+                    });
+                    
+                    document.querySelectorAll('.faq-icon').forEach(faqIcon => {
+                        if (faqIcon !== icon) {
+                            faqIcon.style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    // Basculer la FAQ actuelle
+                    if (content.classList.contains('hidden')) {
+                        content.classList.remove('hidden');
+                        content.classList.add('show');
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        content.classList.remove('show');
+                        content.classList.add('hidden');
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+        });
+    });
+
+    // RDV booking function
+    function bookMeeting() {
+        window.open('https://calendar.app.google/dyykeMQ4szmtABiS9', '_blank', 'noopener,noreferrer');
+    }
+</script>

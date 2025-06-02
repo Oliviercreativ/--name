@@ -2,6 +2,8 @@
 // src/pages/index.astro
 title: "ZestCRM - Créez votre CRM gratuit adapté à votre métier"
 description: "Pourquoi payer 80€/mois quand vous pouvez créer votre CRM gratuit ? Formation ou service clé en main pour artisans, agents immobiliers, consultants."
+import MetiersCarousel from '../components/MetiersCarousel.astro';
+import FAQ from '../components/FAQ.astro';
 ---
 
 <html lang="fr">
@@ -194,61 +196,7 @@ description: "Pourquoi payer 80€/mois quand vous pouvez créer votre CRM gratu
     <!-- Métiers -->
     <section id="metiers" class="bg-white py-20 lg:py-32">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="text-center mb-20">
-                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                    Adapté à votre métier
-                </h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Templates spécialisés avec fonctionnalités métier intégrées
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Artisans -->
-                <div class="text-center p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors">
-                    <div class="text-6xl mb-6">🔨</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Artisans</h3>
-                    <p class="text-gray-600 mb-6">Plombiers, électriciens, menuisiers...</p>
-                    <ul class="text-sm text-gray-600 space-y-2">
-                        <li>• Gestion chantiers et devis</li>
-                        <li>• Suivi matériaux et stock</li>
-                        <li>• Planning interventions</li>
-                        <li>• Calculs automatiques</li>
-                    </ul>
-                </div>
-
-                <!-- Immobilier -->
-                <div class="text-center p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors">
-                    <div class="text-6xl mb-6">🏠</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Immobilier</h3>
-                    <p class="text-gray-600 mb-6">Agents, négociateurs...</p>
-                    <ul class="text-sm text-gray-600 space-y-2">
-                        <li>• Base clients vendeurs/acquéreurs</li>
-                        <li>• Fichier biens avec photos</li>
-                        <li>• Suivi mandats et commissions</li>
-                        <li>• Calculs plus-values</li>
-                    </ul>
-                </div>
-
-                <!-- Consultants -->
-                <div class="text-center p-8 bg-gray-50 rounded-2xl hover:bg-gray-100 transition-colors">
-                    <div class="text-6xl mb-6">💼</div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Consultants</h3>
-                    <p class="text-gray-600 mb-6">Freelances, coaches, experts...</p>
-                    <ul class="text-sm text-gray-600 space-y-2">
-                        <li>• Gestion projets et missions</li>
-                        <li>• Facturation automatique</li>
-                        <li>• Suivi temps et rentabilité</li>
-                        <li>• Pipeline commercial</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="text-center mt-12">
-                <p class="text-gray-600">
-                    <strong>Autres métiers :</strong> Commerçants, Thérapeutes, Formateurs, Designers...
-                </p>
-            </div>
+            <MetiersCarousel />
         </div>
     </section>
 
@@ -443,6 +391,9 @@ description: "Pourquoi payer 80€/mois quand vous pouvez créer votre CRM gratu
         </div>
     </section>
 
+    <!-- FAQ -->
+    <FAQ />
+
     <!-- CTA Final -->
     <section class="bg-zest-500 py-20 lg:py-32">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
@@ -527,8 +478,9 @@ description: "Pourquoi payer 80€/mois quand vous pouvez créer votre CRM gratu
     <script>
         // Google Calendar booking
         function bookMeeting() {
-            // Replace with your actual Google Calendar booking link
-            window.open('https://calendar.google.com/calendar/appointments/schedules/AcZssZ2FER4kZqF_qr6R_UkWy3nFwgPJ_YOUR_CALENDAR_ID', '_blank');
+            // Ouvre le lien de réservation Google Calendar dans un nouvel onglet
+            // avec des paramètres de sécurité supplémentaires
+            window.open('https://calendar.app.google/GAuyVQfSgfuaZ6wL7', '_blank', 'noopener,noreferrer');
         }
 
         // Plan selection
