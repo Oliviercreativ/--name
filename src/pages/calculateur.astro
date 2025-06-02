@@ -1,0 +1,438 @@
+---
+// src/pages/calculateur.astro
+const title = "Calculateur ROI ZestCRM - Économies Temps et Argent";
+const description = "Calculez précisément combien ZestCRM peut vous faire économiser en temps et en argent vs votre CRM actuel ou l'absence de CRM.";
+---
+
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+    <meta name="description" content={description}>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        zest: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .number-animate {
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes countUp {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        .animate-slide-in {
+            animation: slideIn 0.6s ease-out forwards;
+        }
+        
+        .animate-count-up {
+            animation: countUp 0.5s ease-out forwards;
+        }
+        
+        .input-focus {
+            transition: all 0.3s ease;
+        }
+        
+        .input-focus:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.15);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-zest-500 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">Z</span>
+                    </div>
+                    <span class="text-xl font-bold text-gray-900">ZestCRM</span>
+                </div>
+                <a href="/" class="text-gray-600 hover:text-zest-500 transition-colors">← Retour à l'accueil</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="max-w-5xl mx-auto px-4 py-12">
+        <!-- Titre -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                ⏱️💰 Calculez vos <span class="gradient-text">économies</span>
+            </h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Découvrez combien ZestCRM peut vous faire économiser en <strong>temps</strong> et en <strong>argent</strong>
+            </p>
+        </div>
+
+        <!-- Formulaire de calcul -->
+        <div class="bg-white rounded-3xl shadow-xl p-8 lg:p-12 mb-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Inputs -->
+                <div class="space-y-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6">📊 Vos informations actuelles</h2>
+                    
+                    <!-- CRM actuel -->
+                    <div>
+                        <label for="currentCRM" class="block text-lg font-semibold text-gray-900 mb-3">
+                            💳 Coût CRM actuel (€/mois)
+                        </label>
+                        <input 
+                            type="number" 
+                            id="currentCRM" 
+                            placeholder="Ex: 80" 
+                            class="input-focus w-full p-4 text-lg border-2 border-gray-200 rounded-xl focus:border-zest-500 focus:ring-4 focus:ring-zest-100 transition-all outline-none"
+                            min="0"
+                        >
+                        <p class="text-sm text-gray-500 mt-2">Mettez 0 si vous n'avez pas de CRM</p>
+                    </div>
+
+                    <!-- Temps de gestion par semaine -->
+                    <div>
+                        <label for="weeklyHours" class="block text-lg font-semibold text-gray-900 mb-3">
+                            ⏰ Temps gestion clients (heures/semaine)
+                        </label>
+                        <input 
+                            type="number" 
+                            id="weeklyHours" 
+                            placeholder="Ex: 8" 
+                            class="input-focus w-full p-4 text-lg border-2 border-gray-200 rounded-xl focus:border-zest-500 focus:ring-4 focus:ring-zest-100 transition-all outline-none"
+                            min="0"
+                        >
+                        <p class="text-sm text-gray-500 mt-2">Saisie, recherche, relances, suivi...</p>
+                    </div>
+
+                    <!-- Taux horaire -->
+                    <div>
+                        <label for="hourlyRate" class="block text-lg font-semibold text-gray-900 mb-3">
+                            💼 Votre taux horaire (€/h)
+                        </label>
+                        <input 
+                            type="number" 
+                            id="hourlyRate" 
+                            placeholder="Ex: 50" 
+                            class="input-focus w-full p-4 text-lg border-2 border-gray-200 rounded-xl focus:border-zest-500 focus:ring-4 focus:ring-zest-100 transition-all outline-none"
+                            min="0"
+                        >
+                        <p class="text-sm text-gray-500 mt-2">CA annuel ÷ heures travaillées</p>
+                    </div>
+
+                    <!-- Prospects perdus -->
+                    <div>
+                        <label for="lostProspects" class="block text-lg font-semibold text-gray-900 mb-3">
+                            😴 Prospects "oubliés" par mois (%)
+                        </label>
+                        <input 
+                            type="number" 
+                            id="lostProspects" 
+                            placeholder="Ex: 20" 
+                            class="input-focus w-full p-4 text-lg border-2 border-gray-200 rounded-xl focus:border-zest-500 focus:ring-4 focus:ring-zest-100 transition-all outline-none"
+                            min="0" max="100"
+                        >
+                        <p class="text-sm text-gray-500 mt-2">Clients qui "disparaissent" par manque de suivi</p>
+                    </div>
+
+                    <!-- Valeur client moyenne -->
+                    <div>
+                        <label for="avgClientValue" class="block text-lg font-semibold text-gray-900 mb-3">
+                            💰 Valeur client moyenne (€)
+                        </label>
+                        <input 
+                            type="number" 
+                            id="avgClientValue" 
+                            placeholder="Ex: 1200" 
+                            class="input-focus w-full p-4 text-lg border-2 border-gray-200 rounded-xl focus:border-zest-500 focus:ring-4 focus:ring-zest-100 transition-all outline-none"
+                            min="0"
+                        >
+                        <p class="text-sm text-gray-500 mt-2">Chiffre d'affaires moyen par client</p>
+                    </div>
+                </div>
+
+                <!-- Résultats -->
+                <div class="bg-gradient-to-br from-zest-50 to-orange-50 rounded-2xl p-8">
+                    <h2 class="text-2xl font-bold text-gray-900 mb-8">🎯 Vos économies avec ZestCRM</h2>
+                    
+                    <!-- Économies annuelles -->
+                    <div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">💸 Économies financières</h3>
+                        
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div class="text-center">
+                                <div id="crmSavings" class="text-2xl font-bold text-green-600 number-animate">0€</div>
+                                <div class="text-sm text-gray-600">CRM (5 ans)</div>
+                            </div>
+                            <div class="text-center">
+                                <div id="timeSavings" class="text-2xl font-bold text-blue-600 number-animate">0€</div>
+                                <div class="text-sm text-gray-600">Temps gagné (an)</div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center pt-4 border-t border-gray-200">
+                            <div id="totalSavings" class="text-3xl font-bold gradient-text number-animate">0€</div>
+                            <div class="text-sm text-gray-600">Total économisé (5 ans)</div>
+                        </div>
+                    </div>
+
+                    <!-- Prospects récupérés -->
+                    <div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">🎯 Revenus récupérés</h3>
+                        
+                        <div class="text-center">
+                            <div id="recoveredRevenue" class="text-2xl font-bold text-zest-600 number-animate">0€</div>
+                            <div class="text-sm text-gray-600">CA supplémentaire par an</div>
+                        </div>
+                        
+                        <div class="mt-4 text-center">
+                            <div id="recoveredProspects" class="text-lg font-semibold text-gray-900 number-animate">0</div>
+                            <div class="text-sm text-gray-600">Prospects récupérés/an</div>
+                        </div>
+                    </div>
+
+                    <!-- Temps gagné -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-lg font-semibold text-gray-900 mb-4">⏰ Temps libéré</h3>
+                        
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="text-center">
+                                <div id="weeklyTimeSaved" class="text-xl font-bold text-purple-600 number-animate">0h</div>
+                                <div class="text-sm text-gray-600">Par semaine</div>
+                            </div>
+                            <div class="text-center">
+                                <div id="yearlyTimeSaved" class="text-xl font-bold text-purple-600 number-animate">0h</div>
+                                <div class="text-sm text-gray-600">Par an</div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 p-3 bg-purple-50 rounded-lg">
+                            <div class="text-center">
+                                <div id="timeEquivalent" class="text-sm text-purple-800 font-medium">= 0 semaines de vacances</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ROI -->
+                    <div class="mt-6 p-4 bg-green-100 rounded-xl text-center">
+                        <div class="text-sm text-green-800 font-medium mb-1">ROI ZestCRM (690€)</div>
+                        <div id="roiMultiplier" class="text-2xl font-bold text-green-700">0x</div>
+                        <div class="text-sm text-green-600">Retour sur investissement</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Insights personnalisés -->
+        <div id="insights" class="hidden bg-white rounded-2xl p-8 shadow-lg mb-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6">💡 Analyse de votre situation</h3>
+            <div id="insightContent" class="text-gray-700 leading-relaxed"></div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center">
+            <div class="bg-zest-500 rounded-2xl p-8 text-white">
+                <h3 class="text-2xl font-bold mb-4">Prêt à récupérer ces économies ?</h3>
+                <p class="text-zest-100 mb-6">Réservez votre consultation gratuite pour valider ces calculs avec vos vraies données</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="bookConsultation()" class="bg-white text-zest-500 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
+                        📞 Consultation gratuite
+                    </button>
+                    <a href="/" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-zest-500 transition-colors">
+                        🏠 Retour à l'accueil
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fonction de calcul principal
+        function calculateROI() {
+            // Récupérer les valeurs
+            const currentCRM = parseFloat(document.getElementById('currentCRM').value) || 0;
+            const weeklyHours = parseFloat(document.getElementById('weeklyHours').value) || 0;
+            const hourlyRate = parseFloat(document.getElementById('hourlyRate').value) || 0;
+            const lostProspects = parseFloat(document.getElementById('lostProspects').value) || 0;
+            const avgClientValue = parseFloat(document.getElementById('avgClientValue').value) || 0;
+
+            // Calculs économies CRM
+            const yearlyCRMCost = currentCRM * 12;
+            const fiveYearCRMCost = yearlyCRMCost * 5;
+            const zestCRMCost = 690; // Prix Done For You
+            const crmSavings = fiveYearCRMCost - zestCRMCost;
+
+            // Calculs temps gagné (ZestCRM fait gagner ~40% du temps de gestion)
+            const timeSavedPercent = 0.4;
+            const weeklyTimeSaved = weeklyHours * timeSavedPercent;
+            const yearlyTimeSaved = weeklyTimeSaved * 52;
+            const timeSavingsValue = yearlyTimeSaved * hourlyRate;
+
+            // Calculs prospects récupérés (ZestCRM aide à récupérer 70% des prospects perdus)
+            const prospectRecoveryRate = 0.7;
+            const monthlyLostProspects = (lostProspects / 100) * 20; // Assumant 20 prospects/mois
+            const recoveredProspectsMonthly = monthlyLostProspects * prospectRecoveryRate;
+            const recoveredProspectsYearly = recoveredProspectsMonthly * 12;
+            const recoveredRevenue = recoveredProspectsYearly * avgClientValue;
+
+            // Totaux
+            const totalYearlySavings = timeSavingsValue + (recoveredRevenue * 0.3); // 30% de marge
+            const totalFiveYearSavings = (totalYearlySavings * 5) + crmSavings;
+            const roi = totalFiveYearSavings / zestCRMCost;
+
+            // Affichage des résultats avec animation
+            animateNumber('crmSavings', Math.max(0, crmSavings), '€');
+            animateNumber('timeSavings', timeSavingsValue, '€');
+            animateNumber('totalSavings', totalFiveYearSavings, '€');
+            animateNumber('recoveredRevenue', recoveredRevenue, '€');
+            animateNumber('recoveredProspects', Math.round(recoveredProspectsYearly), '');
+            animateNumber('weeklyTimeSaved', weeklyTimeSaved, 'h');
+            animateNumber('yearlyTimeSaved', Math.round(yearlyTimeSaved), 'h');
+            animateNumber('roiMultiplier', roi, 'x');
+
+            // Équivalent temps en semaines de vacances (35h/semaine)
+            const vacationWeeks = Math.round(yearlyTimeSaved / 35);
+            document.getElementById('timeEquivalent').textContent = `= ${vacationWeeks} semaines de vacances`;
+
+            // Afficher les insights
+            showInsights(totalFiveYearSavings, weeklyTimeSaved, recoveredRevenue);
+        }
+
+        // Animation des nombres
+        function animateNumber(elementId, finalValue, suffix) {
+            const element = document.getElementById(elementId);
+            const duration = 1000;
+            const steps = 30;
+            const increment = finalValue / steps;
+            let current = 0;
+            let step = 0;
+
+            const timer = setInterval(() => {
+                current += increment;
+                step++;
+                
+                if (step >= steps) {
+                    current = finalValue;
+                    clearInterval(timer);
+                }
+                
+                if (suffix === '€') {
+                    element.textContent = formatEuros(Math.round(current));
+                } else if (suffix === 'x') {
+                    element.textContent = current.toFixed(1) + suffix;
+                } else {
+                    element.textContent = Math.round(current) + suffix;
+                }
+            }, duration / steps);
+
+            // Animation visuelle
+            element.classList.add('animate-count-up');
+        }
+
+        // Formatage euros
+        function formatEuros(amount) {
+            return Math.round(amount).toLocaleString('fr-FR') + '€';
+        }
+
+        // Insights personnalisés
+        function showInsights(totalSavings, weeklyTimeSaved, recoveredRevenue) {
+            const insights = document.getElementById('insights');
+            const content = document.getElementById('insightContent');
+            
+            let message = '';
+            
+            if (totalSavings > 50000) {
+                message = `🎯 <strong>Potentiel exceptionnel !</strong><br><br>
+                Avec ${formatEuros(totalSavings)} d'économies sur 5 ans, ZestCRM se rembourse en moins de 2 semaines ! 
+                Vous récupérez ${weeklyTimeSaved.toFixed(1)}h par semaine et ${formatEuros(recoveredRevenue)} de CA supplémentaire par an.<br><br>
+                <strong>Recommandation :</strong> Formule "Automatisation Pro" pour maximiser ces gains.`;
+            } else if (totalSavings > 20000) {
+                message = `💡 <strong>Excellent retour sur investissement !</strong><br><br>
+                ${formatEuros(totalSavings)} d'économies représentent un ROI de ${Math.round(totalSavings / 690)}x sur votre investissement. 
+                Le temps gagné (${weeklyTimeSaved.toFixed(1)}h/semaine) vous permet de vous concentrer sur votre cœur de métier.<br><br>
+                <strong>Recommandation :</strong> Formule "Done For You" idéale pour votre profil.`;
+            } else if (totalSavings > 5000) {
+                message = `⭐ <strong>ROI solide pour votre entreprise</strong><br><br>
+                ${formatEuros(totalSavings)} d'économies sur 5 ans, c'est significatif ! Même avec des gains modestes, 
+                ZestCRM vous fait gagner du temps précieux et améliore votre organisation.<br><br>
+                <strong>Recommandation :</strong> Formule "DIY Autonome" pour commencer.`;
+            } else {
+                message = `🌟 <strong>Optimisation progressive</strong><br><br>
+                Même avec ${formatEuros(totalSavings)} d'économies, c'est un investissement rentable ! 
+                ZestCRM vous aide à structurer votre approche client pour préparer votre croissance.<br><br>
+                <strong>Recommandation :</strong> Commencez par la formation DIY, évoluez selon vos besoins.`;
+            }
+            
+            content.innerHTML = message;
+            insights.classList.remove('hidden');
+            insights.classList.add('animate-slide-in');
+        }
+
+        // Consultation booking
+        function bookConsultation() {
+            // Récupérer les valeurs pour les inclure dans le RDV
+            const currentCRM = document.getElementById('currentCRM').value;
+            const weeklyHours = document.getElementById('weeklyHours').value;
+            const totalSavings = document.getElementById('totalSavings').textContent;
+            
+            const message = `🎯 Consultation ZestCRM\n\nVos calculs :\n• CRM actuel : ${currentCRM}€/mois\n• Temps gestion : ${weeklyHours}h/semaine\n• Économies potentielles : ${totalSavings}\n\nNous analysons votre situation spécifique et vous montrons comment atteindre ces résultats.\n\nRéserver maintenant ?`;
+            
+            if (confirm(message)) {
+                // Remplace par ton lien Google Calendar
+                window.open('https://calendar.google.com/calendar/appointments/YOUR_CALENDAR_ID', '_blank');
+            }
+        }
+
+        // Event listeners pour calcul en temps réel
+        ['currentCRM', 'weeklyHours', 'hourlyRate', 'lostProspects', 'avgClientValue'].forEach(id => {
+            const element = document.getElementById(id);
+            element.addEventListener('input', calculateROI);
+            element.addEventListener('change', calculateROI);
+        });
+
+        // Animation d'entrée au chargement
+        document.addEventListener('DOMContentLoaded', function() {
+            // Pré-remplir avec des valeurs d'exemple pour démonstration
+            setTimeout(() => {
+                document.getElementById('currentCRM').value = '80';
+                document.getElementById('weeklyHours').value = '6';
+                document.getElementById('hourlyRate').value = '45';
+                document.getElementById('lostProspects').value = '25';
+                document.getElementById('avgClientValue').value = '1200';
+                calculateROI();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

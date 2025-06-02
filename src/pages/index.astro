@@ -96,9 +96,9 @@ description: "Pourquoi payer 80€/mois quand vous pouvez créer votre CRM gratu
                     <button onclick="bookMeeting()" class="bg-zest-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-zest-600 transition-all transform hover:scale-105">
                         Voir comment ça marche
                     </button>
-                    <button onclick="showCalculator()" class="text-zest-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-zest-50 transition-colors">
+                    <a href="/calculateur" class="text-zest-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-zest-50 transition-colors inline-block">
                         Calculer mes économies →
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -458,9 +458,9 @@ description: "Pourquoi payer 80€/mois quand vous pouvez créer votre CRM gratu
                 <button onclick="bookMeeting()" class="bg-white text-zest-500 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
                     Réserver ma consultation gratuite
                 </button>
-                <button onclick="showCalculator()" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-zest-500 transition-colors">
+                <a href="/calculateur" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-zest-500 transition-colors inline-block">
                     Calculer mes économies
-                </button>
+                </a>
             </div>
             
             <p class="text-zest-100 mt-8 text-sm">
@@ -555,31 +555,8 @@ description: "Pourquoi payer 80€/mois quand vous pouvez créer votre CRM gratu
 
         // Calculator modal/page
         function showCalculator() {
-            // You can either:
-            // 1. Redirect to a separate calculator page
-            // window.location.href = '/calculatrice';
-            
-            // 2. Or show a simple modal calculation
-            const currentCRM = prompt('Combien payez-vous actuellement pour votre CRM par mois ? (en €, tapez 0 si vous n\'en avez pas)');
-            
-            if (currentCRM !== null) {
-                const monthly = parseFloat(currentCRM) || 80; // Default to 80€ if no answer
-                const yearly = monthly * 12;
-                const fiveYears = yearly * 5;
-                const zestCost = 690; // Done For You price
-                const savings = fiveYears - zestCost;
-                
-                alert(`💰 Vos économies avec ZestCRM :\n\n` +
-                      `Coût actuel sur 5 ans : ${fiveYears}€\n` +
-                      `ZestCRM (une fois) : ${zestCost}€\n` +
-                      `━━━━━━━━━━━━━━━━━━━━━━━━━\n` +
-                      `ÉCONOMIES : ${savings}€ !\n\n` +
-                      `Prendre RDV pour une analyse personnalisée ?`);
-                
-                if (confirm('Réserver une consultation gratuite ?')) {
-                    bookMeeting();
-                }
-            }
+            // Rediriger vers la page calculateur
+            window.location.href = '/calculateur';
         }
 
         // Smooth scrolling for internal links
