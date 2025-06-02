@@ -1,0 +1,117 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Base styles */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans antialiased;
+  }
+  
+  /* Focus styles */
+  *:focus {
+    @apply outline-none ring-2 ring-zest-500 ring-offset-2;
+  }
+  
+  /* Selection styles */
+  ::selection {
+    @apply bg-zest-500 text-white;
+  }
+}
+
+/* Components */
+@layer components {
+  /* Boutons */
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply btn bg-zest-500 text-white hover:bg-zest-600 focus:ring-zest-500 shadow-lg hover:shadow-xl transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-white text-zest-600 border-zest-200 hover:bg-zest-50 focus:ring-zest-500;
+  }
+  
+  .btn-outline {
+    @apply btn bg-transparent text-zest-600 border-zest-500 hover:bg-zest-500 hover:text-white focus:ring-zest-500;
+  }
+  
+  /* Cards */
+  .card {
+    @apply bg-white rounded-2xl shadow-lg border border-gray-100 p-6 transition-all duration-200 hover:shadow-xl;
+  }
+  
+  .card-hover {
+    @apply card hover:transform hover:scale-105;
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-zest-500 to-zest-600 bg-clip-text text-transparent;
+  }
+  
+  /* Sections */
+  .section {
+    @apply py-20 lg:py-32;
+  }
+  
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6;
+  }
+  
+  /* Hero pattern */
+  .hero-pattern {
+    background-image: 
+      radial-gradient(circle at 25px 25px, rgba(249, 115, 22, 0.1) 2%, transparent 0%),
+      radial-gradient(circle at 75px 75px, rgba(234, 88, 12, 0.1) 2%, transparent 0%);
+    background-size: 100px 100px;
+  }
+  
+  /* Glass effect */
+  .glass {
+    @apply backdrop-blur-md bg-white/90 border border-white/20;
+  }
+  
+  /* Animations */
+  .animate-in {
+    @apply opacity-0 translate-y-4;
+    animation: slideIn 0.6s ease-out forwards;
+  }
+  
+  @keyframes slideIn {
+    to {
+      @apply opacity-100 translate-y-0;
+    }
+  }
+}
+
+/* Utilities */
+@layer utilities {
+  /* Text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Scroll utilities */
+  .scroll-smooth {
+    scroll-behavior: smooth;
+  }
+  
+  /* Hide scrollbar */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
