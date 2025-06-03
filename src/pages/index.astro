@@ -2,8 +2,10 @@
 // src/pages/index.astro
 title: "ZestCRM - Créez votre CRM gratuit adapté à votre métier"
 description: "Pourquoi payer 80€/mois quand vous pouvez créer votre CRM gratuit ? Formation ou service clé en main pour artisans, agents immobiliers, consultants."
+import CRMBenefits from '../components/CRMBenefits.astro';
 import MetiersCarousel from '../components/MetiersCarousel.astro';
 import FAQ from '../components/FAQ.astro';
+import WhatAutomation from '../components/WhatAutomation.astro';
 ---
 
 <html lang="fr">
@@ -68,24 +70,23 @@ import FAQ from '../components/FAQ.astro';
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 lg:py-32">
             <div class="text-center">
                 <h1 class="text-5xl lg:text-7xl font-black text-gray-900 mb-8 leading-tight">
-                    Le CRM qui vous apprend<br>
-                    <span class="gradient-text">à ne plus payer</span>
+                    Economisez et créez votre CRM
+                    <span class="gradient-text">avec Airtable</span>
                 </h1>
                 
                 <p class="text-xl lg:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
-                    Créez votre CRM gratuit en 4h ou on le fait pour vous.<br>
-                    Spécialisé pour votre métier. <strong>0€/mois à vie.</strong>
+                    J'accompagne les enteprises et les entrepreneurs a créer leur CRM selon leurs besoins pour gagner du temps et optimiser leurs productivités. <br>
                 </p>
 
                 <!-- Stats -->
                 <div class="flex justify-center items-center space-x-12 mb-16">
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-gray-900">300+</div>
+                        <div class="text-3xl font-bold text-gray-900">100+</div>
                         <div class="text-sm text-gray-600">Entreprises formées</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-gray-900">4800€</div>
-                        <div class="text-sm text-gray-600">Économies moyennes</div>
+                        <div class="text-3xl font-bold text-gray-900">600€</div>
+                        <div class="text-sm text-gray-600">Économies moyennes par ans</div>
                     </div>
                     <div class="text-center">
                         <div class="text-3xl font-bold text-gray-900">4h</div>
@@ -113,8 +114,8 @@ import FAQ from '../components/FAQ.astro';
                 <!-- Problem -->
                 <div>
                     <h2 class="text-4xl font-bold text-gray-900 mb-8">
-                        Stop aux CRM qui<br>
-                        <span class="text-red-600">vous ruinent</span>
+                        Les CRM qu'on utilise à<br>
+                        <span class="text-red-600">50% de leur capacité</span>
                     </h2>
                     
                     <div class="space-y-6">
@@ -133,8 +134,8 @@ import FAQ from '../components/FAQ.astro';
                                 <span class="text-red-600 font-bold">×</span>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-gray-900 mb-1">Interface générique</h3>
-                                <p class="text-gray-600">Pas adapté à votre métier, formation longue et complexe</p>
+                                <h3 class="font-semibold text-gray-900 mb-1">CRM générique</h3>
+                                <p class="text-gray-600">Aucune évolution possible</p>
                             </div>
                         </div>
                         
@@ -144,7 +145,7 @@ import FAQ from '../components/FAQ.astro';
                             </div>
                             <div>
                                 <h3 class="font-semibold text-gray-900 mb-1">Données prisonnières</h3>
-                                <p class="text-gray-600">Impossible de partir, évolutions imposées, hausse de prix</p>
+                                <p class="text-gray-600">Vos données sont prisionnières dans le CRM, et si vous souhaitez changer ?</p>
                             </div>
                         </div>
                     </div>
@@ -154,7 +155,7 @@ import FAQ from '../components/FAQ.astro';
                 <div>
                     <h2 class="text-4xl font-bold text-gray-900 mb-8">
                         Votre CRM<br>
-                        <span class="gradient-text">sur-mesure</span>
+                        <span class="gradient-text">pour votre activité</span>
                     </h2>
                     
                     <div class="space-y-6">
@@ -163,8 +164,8 @@ import FAQ from '../components/FAQ.astro';
                                 <span class="text-green-600 font-bold">✓</span>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-gray-900 mb-1">0€/mois à vie</h3>
-                                <p class="text-gray-600">Formation une fois, économies pour toujours</p>
+                                <h3 class="font-semibold text-gray-900 mb-1">Gratuit</h3>
+                                <p class="text-gray-600">Formation payante mais l'utisation du CRM est gratuite</p>
                             </div>
                         </div>
                         
@@ -173,8 +174,8 @@ import FAQ from '../components/FAQ.astro';
                                 <span class="text-green-600 font-bold">✓</span>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-gray-900 mb-1">Spécialisé métier</h3>
-                                <p class="text-gray-600">Templates et fonctions adaptées à votre activité</p>
+                                <h3 class="font-semibold text-gray-900 mb-1">Personnalisé à votre activité</h3>
+                                <p class="text-gray-600">Des templates adaptés à votre secteur d'activité</p>
                             </div>
                         </div>
                         
@@ -183,12 +184,27 @@ import FAQ from '../components/FAQ.astro';
                                 <span class="text-green-600 font-bold">✓</span>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-gray-900 mb-1">Vous contrôlez tout</h3>
-                                <p class="text-gray-600">Vos données, vos évolutions, votre rythme</p>
+                                <h3 class="font-semibold text-gray-900 mb-1">Evolutif selon vos besoins</h3>
+                                <p class="text-gray-600">Vous pouvez modifier votre CRM à tout moment</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CRMBenefits -->
+    <section id="metiers" class="bg-white py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <CRMBenefits />
+        </div>
+    </section>
+    <!-- WhatAutomation -->
+    <section id="formules" class="bg-gray-50 py-20 lg:py-32">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-20">
+                <WhatAutomation />
             </div>
         </div>
     </section>
@@ -315,7 +331,7 @@ import FAQ from '../components/FAQ.astro';
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-16">
                 <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                    Ils ont créé leur CRM gratuit
+                    Les clients vous donnent leurs retours
                 </h2>
             </div>
 
