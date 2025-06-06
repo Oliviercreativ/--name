@@ -3,217 +3,111 @@
 // Composant carousel pour la section métiers
 ---
 
-<section id="metiers" class="bg-white py-20 lg:py-32">
+<section id="metiers" class="py-20 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="text-center mb-16">
             <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                Adapté à <span class="gradient-text">votre métier</span>
+                Adapté à votre métier
             </h2>
-            <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
-                Templates spécialisés avec fonctionnalités métier intégrées
+            <p class="text-xl text-gray-600">
+                Des solutions sur mesure pour chaque profession
             </p>
-            
-            <!-- Navigation dots -->
-            <div class="flex justify-center space-x-2 mb-8">
-                <button class="carousel-dot active w-3 h-3 bg-zest-500 rounded-full transition-all" data-slide="0"></button>
-                <button class="carousel-dot w-3 h-3 bg-gray-300 rounded-full transition-all" data-slide="1"></button>
-                <button class="carousel-dot w-3 h-3 bg-gray-300 rounded-full transition-all" data-slide="2"></button>
-                <button class="carousel-dot w-3 h-3 bg-gray-300 rounded-full transition-all" data-slide="3"></button>
-            </div>
         </div>
 
         <!-- Carousel Container -->
         <div class="relative overflow-hidden">
-            <!-- Carousel wrapper -->
             <div id="carousel-wrapper" class="flex transition-transform duration-500 ease-in-out">
-                
-                <!-- Slide 1: Artisans -->
+                <!-- Slide 1 -->
                 <div class="carousel-slide w-full flex-shrink-0">
                     <div class="grid md:grid-cols-3 gap-8">
-                        <!-- Plombier -->
-                        <div class="metier-card text-center p-8 bg-blue-50 rounded-2xl hover:bg-blue-100 transition-all duration-300 transform hover:scale-105">
-                            <div class="text-6xl mb-6">🔧</div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Plombiers</h3>
-                            <ul class="text-sm text-gray-600 space-y-2 text-left">
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Gestion interventions urgences/RDV</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Devis tuyauterie avec calculs auto</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Stock raccords et matériaux</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Suivi chantiers et SAV</li>
+                        <!-- Artisans -->
+                        <div class="bg-white rounded-2xl p-8 shadow-sm">
+                            <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+                                <span class="text-orange-600 text-2xl">🔧</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">Artisans</h3>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-center space-x-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>Gestion des chantiers</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>Suivi des devis</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>Planning des interventions</span>
+                                </li>
                             </ul>
                         </div>
 
-                        <!-- Électricien -->
-                        <div class="metier-card text-center p-8 bg-yellow-50 rounded-2xl hover:bg-yellow-100 transition-all duration-300 transform hover:scale-105">
-                            <div class="text-6xl mb-6">⚡</div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Électriciens</h3>
-                            <ul class="text-sm text-gray-600 space-y-2 text-left">
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Planning interventions/installations</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Devis conformité normes NF</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Gestion certificats Consuel</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Suivi tableaux électriques</li>
+                        <!-- Agents immobiliers -->
+                        <div class="bg-white rounded-2xl p-8 shadow-sm">
+                            <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                                <span class="text-blue-600 text-2xl">🏠</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">Agents immobiliers</h3>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-center space-x-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>Gestion des biens</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>Suivi des visites</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>Automatisation des relances</span>
+                                </li>
                             </ul>
                         </div>
 
-                        <!-- Menuisier -->
-                        <div class="metier-card text-center p-8 bg-amber-50 rounded-2xl hover:bg-amber-100 transition-all duration-300 transform hover:scale-105">
-                            <div class="text-6xl mb-6">🪚</div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Menuisiers</h3>
-                            <ul class="text-sm text-gray-600 space-y-2 text-left">
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Projets sur-mesure avec plans</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Calculs volume bois automatique</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Suivi commandes et livraisons</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Gestion atelier et pose</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 2: Immobilier -->
-                <div class="carousel-slide w-full flex-shrink-0">
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <!-- Agent Immobilier -->
-                        <div class="metier-card text-center p-8 bg-emerald-50 rounded-2xl hover:bg-emerald-100 transition-all duration-300 transform hover:scale-105">
-                            <div class="text-6xl mb-6">🏠</div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Agents Immobiliers</h3>
-                            <ul class="text-sm text-gray-600 space-y-2 text-left">
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Base vendeurs/acquéreurs</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Fichier biens avec photos</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Suivi mandats et commissions</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Calculs plus-values auto</li>
-                            </ul>
-                        </div>
-
-                        <!-- Négociateur -->
-                        <div class="metier-card text-center p-8 bg-teal-50 rounded-2xl hover:bg-teal-100 transition-all duration-300 transform hover:scale-105">
-                            <div class="text-6xl mb-6">🤝</div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Négociateurs</h3>
-                            <ul class="text-sm text-gray-600 space-y-2 text-left">
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Pipeline négociations avancé</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Suivi visites et feedbacks</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Matching automatique biens</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Relances prospects qualifiés</li>
-                            </ul>
-                        </div>
-
-                        <!-- Syndic -->
-                        <div class="metier-card text-center p-8 bg-cyan-50 rounded-2xl hover:bg-cyan-100 transition-all duration-300 transform hover:scale-105">
-                            <div class="text-6xl mb-6">🏢</div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Syndics</h3>
-                            <ul class="text-sm text-gray-600 space-y-2 text-left">
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Gestion copropriétés multiples</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Suivi assemblées générales</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Incidents et travaux</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Budgets prévisionnels</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 3: Services -->
-                <div class="carousel-slide w-full flex-shrink-0">
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <!-- Consultant -->
-                        <div class="metier-card text-center p-8 bg-purple-50 rounded-2xl hover:bg-purple-100 transition-all duration-300 transform hover:scale-105">
-                            <div class="text-6xl mb-6">💼</div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Consultants</h3>
-                            <ul class="text-sm text-gray-600 space-y-2 text-left">
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Gestion projets et missions</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Facturation temps passé</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Suivi rentabilité par client</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Pipeline commercial avancé</li>
-                            </ul>
-                        </div>
-
-                        <!-- Coach -->
-                        <div class="metier-card text-center p-8 bg-rose-50 rounded-2xl hover:bg-rose-100 transition-all duration-300 transform hover:scale-105">
-                            <div class="text-6xl mb-6">🎯</div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Coachs</h3>
-                            <ul class="text-sm text-gray-600 space-y-2 text-left">
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Suivi parcours clients individuels</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Planning séances et packages</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Objectifs et progression</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Relances motivation</li>
-                            </ul>
-                        </div>
-
-                        <!-- Formateur -->
-                        <div class="metier-card text-center p-8 bg-indigo-50 rounded-2xl hover:bg-indigo-100 transition-all duration-300 transform hover:scale-105">
-                            <div class="text-6xl mb-6">🎓</div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Formateurs</h3>
-                            <ul class="text-sm text-gray-600 space-y-2 text-left">
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Gestion sessions et participants</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Suivi certifications QUALIOPI</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Évaluations et satisfaction</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Planning formateurs multiples</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 4: Autres métiers -->
-                <div class="carousel-slide w-full flex-shrink-0">
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <!-- Thérapeute -->
-                        <div class="metier-card text-center p-8 bg-green-50 rounded-2xl hover:bg-green-100 transition-all duration-300 transform hover:scale-105">
-                            <div class="text-6xl mb-6">🌿</div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Thérapeutes</h3>
-                            <ul class="text-sm text-gray-600 space-y-2 text-left">
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Dossiers patients confidentiels</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Planning consultations</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Suivi traitements et évolution</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Relances préventives</li>
-                            </ul>
-                        </div>
-
-                        <!-- Photographe -->
-                        <div class="metier-card text-center p-8 bg-pink-50 rounded-2xl hover:bg-pink-100 transition-all duration-300 transform hover:scale-105">
-                            <div class="text-6xl mb-6">📸</div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Photographes</h3>
-                            <ul class="text-sm text-gray-600 space-y-2 text-left">
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Gestion shootings et événements</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Livraison galeries clients</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Suivi retouches et validations</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Packages et options</li>
-                            </ul>
-                        </div>
-
-                        <!-- Commerçant -->
-                        <div class="metier-card text-center p-8 bg-orange-50 rounded-2xl hover:bg-orange-100 transition-all duration-300 transform hover:scale-105">
-                            <div class="text-6xl mb-6">🛍️</div>
-                            <h3 class="text-2xl font-bold text-gray-900 mb-4">Commerçants</h3>
-                            <ul class="text-sm text-gray-600 space-y-2 text-left">
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Base clients et historique achats</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Gestion fidélité et promotions</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Stock et réassorts</li>
-                                <li class="flex items-center"><span class="text-green-500 mr-2">•</span> Analyse ventes saisonnières</li>
+                        <!-- Consultants -->
+                        <div class="bg-white rounded-2xl p-8 shadow-sm">
+                            <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                                <span class="text-purple-600 text-2xl">💼</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-4">Consultants</h3>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-center space-x-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>Gestion des projets</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>Facturation automatique</span>
+                                </li>
+                                <li class="flex items-center space-x-2">
+                                    <span class="text-green-500">✓</span>
+                                    <span>Suivi du temps</span>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Navigation arrows -->
-            <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 z-10">
-                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+            <!-- Navigation Buttons -->
+            <button id="prevBtn" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                 </svg>
             </button>
-            
-            <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 z-10">
-                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+            <button id="nextBtn" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
             </button>
-        </div>
 
-        <!-- CTA -->
-        <div class="text-center mt-16">
-            <p class="text-gray-600 mb-6">
-                <strong>Votre métier n'est pas listé ?</strong> On crée votre template personnalisé !
-            </p>
-            <button onclick="bookMeeting()" class="bg-zest-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-zest-600 transition-colors">
-                Voir si votre métier est supporté →
-            </button>
+            <!-- Dots Navigation -->
+            <div class="flex justify-center mt-8 space-x-2">
+                <button class="carousel-dot w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
+                <button class="carousel-dot w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
+                <button class="carousel-dot w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
+                <button class="carousel-dot w-2 h-2 rounded-full bg-gray-300 transition-all duration-300"></button>
+            </div>
         </div>
     </div>
 </section>
@@ -257,94 +151,101 @@
     }
 </style>
 
-<script>
-    // Carousel functionality
-    let currentSlide = 0;
-    const totalSlides = 4;
-    const carousel = document.getElementById('carousel-wrapper');
-    const dots = document.querySelectorAll('.carousel-dot');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
+<script type="module">
+    // Attendre que le DOM soit chargé
+    document.addEventListener('DOMContentLoaded', () => {
+        // Carousel functionality
+        let currentSlide = 0;
+        const totalSlides = 4;
+        const carousel = document.getElementById('carousel-wrapper');
+        const dots = document.querySelectorAll('.carousel-dot');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const carouselSection = document.getElementById('metiers');
 
-    function updateCarousel() {
-        const translateX = -currentSlide * 100;
-        carousel.style.transform = `translateX(${translateX}%)`;
-        
-        // Update dots
+        if (!carousel || !dots.length || !prevBtn || !nextBtn || !carouselSection) {
+            console.warn('Certains éléments du carousel sont manquants');
+            return;
+        }
+
+        function updateCarousel() {
+            const translateX = -currentSlide * 100;
+            carousel.style.transform = `translateX(${translateX}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                if (index === currentSlide) {
+                    dot.classList.add('active');
+                    dot.classList.remove('bg-gray-300');
+                    dot.classList.add('bg-zest-500');
+                } else {
+                    dot.classList.remove('active');
+                    dot.classList.remove('bg-zest-500');
+                    dot.classList.add('bg-gray-300');
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            updateCarousel();
+        }
+
+        // Event listeners
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
         dots.forEach((dot, index) => {
-            if (index === currentSlide) {
-                dot.classList.add('active');
-                dot.classList.remove('bg-gray-300');
-                dot.classList.add('bg-zest-500');
-            } else {
-                dot.classList.remove('active');
-                dot.classList.remove('bg-zest-500');
-                dot.classList.add('bg-gray-300');
-            }
+            dot.addEventListener('click', () => goToSlide(index));
         });
-    }
 
-    function nextSlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateCarousel();
-    }
+        // Auto-advance every 8 seconds
+        let autoAdvance = setInterval(nextSlide, 8000);
 
-    function prevSlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        updateCarousel();
-    }
+        // Touch/swipe support for mobile
+        let startX = 0;
+        let endX = 0;
 
-    function goToSlide(slideIndex) {
-        currentSlide = slideIndex;
-        updateCarousel();
-    }
+        carousel.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
 
-    // Event listeners
-    nextBtn.addEventListener('click', nextSlide);
-    prevBtn.addEventListener('click', prevSlide);
+        carousel.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            handleSwipe();
+        });
 
-    dots.forEach((dot, index) => {
-        dot.addEventListener('click', () => goToSlide(index));
-    });
-
-    // Auto-advance every 8 seconds
-    setInterval(nextSlide, 8000);
-
-    // Touch/swipe support for mobile
-    let startX = 0;
-    let endX = 0;
-
-    carousel.addEventListener('touchstart', (e) => {
-        startX = e.touches[0].clientX;
-    });
-
-    carousel.addEventListener('touchend', (e) => {
-        endX = e.changedTouches[0].clientX;
-        handleSwipe();
-    });
-
-    function handleSwipe() {
-        const swipeThreshold = 50;
-        const diff = startX - endX;
-        
-        if (Math.abs(diff) > swipeThreshold) {
-            if (diff > 0) {
-                nextSlide(); // Swipe left = next
-            } else {
-                prevSlide(); // Swipe right = previous
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = startX - endX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    nextSlide(); // Swipe left = next
+                } else {
+                    prevSlide(); // Swipe right = previous
+                }
             }
         }
-    }
 
-    // Pause auto-advance on hover
-    const carouselSection = document.getElementById('metiers');
-    carouselSection.addEventListener('mouseenter', () => {
-        clearInterval(autoAdvance);
-    });
+        // Pause auto-advance on hover
+        carouselSection.addEventListener('mouseenter', () => {
+            clearInterval(autoAdvance);
+        });
 
-    let autoAdvance = setInterval(nextSlide, 8000);
-    carouselSection.addEventListener('mouseleave', () => {
-        autoAdvance = setInterval(nextSlide, 8000);
+        carouselSection.addEventListener('mouseleave', () => {
+            autoAdvance = setInterval(nextSlide, 8000);
+        });
     });
 
     // RDV booking function (to be connected to your calendar)

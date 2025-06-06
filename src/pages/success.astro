@@ -1,0 +1,59 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Paiement réussi | ZestCRM";
+const description = "Merci pour votre achat !";
+---
+
+<Layout title={title} description={description}>
+    <main class="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full space-y-8 text-center">
+            <div class="bg-white p-8 rounded-2xl shadow-sm">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                </div>
+                
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                    Paiement réussi !
+                </h2>
+                
+                <p class="text-gray-600 mb-8">
+                    Merci pour votre confiance. Nous vous enverrons un email de confirmation 
+                    avec tous les détails de votre achat.
+                </p>
+
+                <div class="space-y-4">
+                    <a href="/" class="block w-full bg-zest-500 hover:bg-zest-600 text-white font-semibold py-3 px-6 rounded-xl text-lg transition-all">
+                        Retour à l'accueil
+                    </a>
+                    <a href="/contact" class="block w-full bg-white hover:bg-gray-50 text-zest-600 font-semibold py-3 px-6 rounded-xl border-2 border-zest-500 text-lg transition-all">
+                        Besoin d'aide ?
+                    </a>
+                </div>
+            </div>
+
+            <!-- Informations supplémentaires -->
+            <div class="bg-white p-6 rounded-xl shadow-sm">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                    Prochaines étapes
+                </h3>
+                <ul class="space-y-3 text-left">
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">✓</span>
+                        <span class="text-gray-600">Email de confirmation</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">✓</span>
+                        <span class="text-gray-600">Accès à votre espace client</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-green-500 mr-2">✓</span>
+                        <span class="text-gray-600">Support dédié</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+</Layout> 

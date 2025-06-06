@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const title = "Paiement annulé | ZestCRM";
+const description = "Votre paiement a été annulé.";
+---
+
+<Layout title={title} description={description}>
+    <main class="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md w-full space-y-8 text-center">
+            <div class="bg-white p-8 rounded-2xl shadow-sm">
+                <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <svg class="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </div>
+                
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">
+                    Paiement annulé
+                </h2>
+                
+                <p class="text-gray-600 mb-8">
+                    Votre paiement a été annulé. Si vous avez des questions ou si vous souhaitez 
+                    réessayer, n'hésitez pas à nous contacter.
+                </p>
+
+                <div class="space-y-4">
+                    <a href="/" class="block w-full bg-zest-500 hover:bg-zest-600 text-white font-semibold py-3 px-6 rounded-xl text-lg transition-all">
+                        Retour à l'accueil
+                    </a>
+                    <a href="/contact" class="block w-full bg-white hover:bg-gray-50 text-zest-600 font-semibold py-3 px-6 rounded-xl border-2 border-zest-500 text-lg transition-all">
+                        Nous contacter
+                    </a>
+                </div>
+            </div>
+
+            <!-- FAQ rapide -->
+            <div class="bg-white p-6 rounded-xl shadow-sm">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">
+                    Questions fréquentes
+                </h3>
+                <div class="space-y-4 text-left">
+                    <div>
+                        <h4 class="font-medium text-gray-900">Pourquoi mon paiement a-t-il été annulé ?</h4>
+                        <p class="text-gray-600 text-sm mt-1">
+                            Cela peut être dû à plusieurs raisons : problème technique, 
+                            annulation volontaire, ou problème avec votre carte bancaire.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="font-medium text-gray-900">Comment puis-je réessayer ?</h4>
+                        <p class="text-gray-600 text-sm mt-1">
+                            Vous pouvez simplement retourner à la page de paiement et 
+                            réessayer avec les mêmes informations ou une autre méthode de paiement.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</Layout> 

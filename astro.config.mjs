@@ -20,11 +20,15 @@ export default defineConfig({
       },
     }),
   ],
-  output: 'static', // Site statique pour de meilleures performances
+  output: 'server',
   compressHTML: true,
   build: {
     assets: 'assets',
     inlineStylesheets: 'auto',
+  },
+  server: {
+    port: 4321,
+    host: true,
   },
   vite: {
     build: {

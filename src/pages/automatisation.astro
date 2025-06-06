@@ -1,9 +1,40 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Pricing from '../components/Pricing.astro';
 
 const title = "Automatisation & Digitalisation | ZestCRM par Olivier";
 const description = "Découvrez comment j'aide les artisans et TPE à automatiser leur gestion client pour récupérer 8h+ par semaine. Exemples concrets et témoignages.";
 const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
+
+const pricingPlans = [
+    {
+        name: "Formation 4h",
+        price: 290,
+        description: "une fois, pas d'abonnement",
+        features: [
+            "Atelier formation 4h",
+            "Templates métier",
+            "Guide vidéo pas-à-pas",
+            "Support 30 jours"
+        ],
+        buttonText: "Je veux apprendre",
+        buttonAction: "diy"
+    },
+    {
+        name: "Pack pro",
+        price: 690,
+        description: "une fois, pas d'abonnement",
+        features: [
+            "Setup complet pour vous",
+            "Import données existantes",
+            "Formation prise en main 2h",
+            "Support 6 mois"
+        ],
+        popular: true,
+        buttonText: "Faites-le pour moi",
+        buttonAction: "done"
+    }
+];
 ---
 
 <Layout title={title} description={description} canonicalURL={canonicalURL}>
@@ -110,6 +141,115 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
                             tout évolue avec votre business.
                         </p>
                         <div class="text-zest-600 font-bold">Flexibilité : 100%</div>
+                    </div>
+                </div>
+
+                <!-- Nouvelle section : Analyse de situation détaillée -->
+                <div class="mt-20 bg-gray-50 rounded-2xl p-8">
+                    <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+                        Comment je transforme votre quotidien
+                    </h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Avant -->
+                        <div class="bg-white rounded-xl p-6 shadow-sm">
+                            <h4 class="text-xl font-bold text-red-600 mb-4 flex items-center">
+                                <span class="mr-2">❌</span> Votre situation actuelle
+                            </h4>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-start">
+                                    <span class="text-red-500 mr-2">•</span>
+                                    Vous passez des heures à faire des tâches répétitives
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-500 mr-2">•</span>
+                                    Des clients sont oubliés faute de suivi
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-500 mr-2">•</span>
+                                    Votre Excel devient ingérable
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-500 mr-2">•</span>
+                                    Les relances sont faites au hasard
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-red-500 mr-2">•</span>
+                                    Vous n'avez pas de vue d'ensemble
+                                </li>
+                            </ul>
+                            <div class="mt-4 p-4 bg-red-50 rounded-lg">
+                                <p class="text-red-700 font-semibold">
+                                    Impact : Perte de temps, clients mécontents, CA non optimisé
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Après -->
+                        <div class="bg-white rounded-xl p-6 shadow-sm">
+                            <h4 class="text-xl font-bold text-green-600 mb-4 flex items-center">
+                                <span class="mr-2">✅</span> Après automatisation
+                            </h4>
+                            <ul class="space-y-3 text-gray-600">
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span>
+                                    Tout est automatisé et synchronisé
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span>
+                                    Aucun client n'est oublié
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span>
+                                    Tableau de bord en temps réel
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span>
+                                    Relances intelligentes et personnalisées
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="text-green-500 mr-2">•</span>
+                                    Vue 360° de votre activité
+                                </li>
+                            </ul>
+                            <div class="mt-4 p-4 bg-green-50 rounded-lg">
+                                <p class="text-green-700 font-semibold">
+                                    Impact : +8h/semaine, clients satisfaits, CA optimisé
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Témoignage rapide -->
+                    <div class="mt-8 bg-zest-50 rounded-xl p-6">
+                        <blockquote class="text-gray-700 italic">
+                            "En 2 semaines, j'ai récupéré plus de temps que je n'aurais pu l'imaginer. 
+                            Le plus surprenant ? C'est que tout fonctionne sans que j'aie à y penser."
+                        </blockquote>
+                        <div class="mt-4 flex items-center">
+                            <div class="w-12 h-12 bg-zest-500 rounded-full flex items-center justify-center mr-4">
+                                <span class="text-white font-bold">P</span>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-900">Pierre D.</p>
+                                <p class="text-sm text-gray-600">Plombier, 15 ans d'expérience</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA secondaire -->
+                    <div class="mt-8 text-center">
+                        <p class="text-gray-600 mb-4">
+                            Prêt à transformer votre gestion client ?
+                        </p>
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
+                            <a href="/calculateur" class="bg-zest-500 hover:bg-zest-600 text-white font-semibold py-3 px-6 rounded-xl text-lg transition-all">
+                                Calculer mon gain de temps
+                            </a>
+                            <button onclick="bookMeeting()" class="bg-white hover:bg-gray-50 text-zest-600 font-semibold py-3 px-6 rounded-xl border-2 border-zest-500 text-lg transition-all">
+                                Discuter avec Olivier
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -393,6 +533,103 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
             </div>
         </section>
 
+        <!-- Section FAQ -->
+        <section class="py-20 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                        Questions <span class="gradient-text">Fréquentes</span>
+                    </h2>
+                    <p class="text-xl text-gray-600">
+                        Tout ce que vous devez savoir sur l'automatisation de votre gestion client
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Question 1 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            Combien de temps faut-il pour mettre en place les automatisations ?
+                        </h3>
+                        <p class="text-gray-600">
+                            En moyenne, la configuration complète prend 4 heures. Je m'occupe de tout, 
+                            vous n'avez qu'à me donner accès à vos outils. La plupart des clients 
+                            commencent à voir les résultats dès la première semaine.
+                        </p>
+                    </div>
+
+                    <!-- Question 2 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            Quels outils sont nécessaires ?
+                        </h3>
+                        <p class="text-gray-600">
+                            Je travaille avec les outils que vous utilisez déjà (Gmail, Excel, etc.). 
+                            Si nécessaire, je peux vous recommander des solutions gratuites ou peu coûteuses. 
+                            L'objectif est de s'adapter à votre environnement existant.
+                        </p>
+                    </div>
+
+                    <!-- Question 3 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            Et si je ne suis pas à l'aise avec la technologie ?
+                        </h3>
+                        <p class="text-gray-600">
+                            Aucun problème ! Je configure tout pour vous. Vous n'avez qu'à utiliser 
+                            les automatisations comme vous le feriez normalement. Je reste disponible 
+                            pour toute question ou ajustement nécessaire.
+                        </p>
+                    </div>
+
+                    <!-- Question 4 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            Quel est le retour sur investissement ?
+                        </h3>
+                        <p class="text-gray-600">
+                            En moyenne, mes clients récupèrent 8h par semaine dès le premier mois. 
+                            Cela représente un gain de productivité significatif et une réduction 
+                            des oublis qui impactent directement votre chiffre d'affaires.
+                        </p>
+                    </div>
+
+                    <!-- Question 5 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            Comment se passe le suivi après la mise en place ?
+                        </h3>
+                        <p class="text-gray-600">
+                            Je reste disponible pour des ajustements et optimisations. Nous faisons 
+                            un point mensuel les 3 premiers mois, puis selon vos besoins. L'objectif 
+                            est que vous soyez totalement autonome avec vos automatisations.
+                        </p>
+                    </div>
+
+                    <!-- Question 6 -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">
+                            Puis-je personnaliser les automatisations ?
+                        </h3>
+                        <p class="text-gray-600">
+                            Absolument ! Chaque automatisation est adaptée à votre façon de travailler 
+                            et à vos besoins spécifiques. Nous commençons par un audit de vos processus 
+                            pour identifier les meilleures opportunités d'automatisation.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <p class="text-gray-600 mb-4">
+                        Vous avez d'autres questions ?
+                    </p>
+                    <button onclick="bookMeeting()" class="bg-zest-500 hover:bg-zest-600 text-white font-semibold py-3 px-6 rounded-xl text-lg transition-all">
+                        📞 Discutons-en ensemblew
+                    </button>
+                </div>
+            </div>
+        </section>
+
         <!-- CTA Section -->
         <section class="py-20 bg-zest-500">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
@@ -418,6 +655,184 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
                 </p>
             </div>
         </section>
+
+        <!-- Timeline de transformation -->
+        <div class="mt-12 bg-white rounded-xl p-6 shadow-sm">
+            <h4 class="text-xl font-bold text-gray-900 mb-6 text-center">
+                Votre parcours de transformation en 4 semaines
+            </h4>
+            <div class="relative">
+                <!-- Ligne de temps -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-zest-200"></div>
+                
+                <!-- Étape 1 -->
+                <div class="relative mb-8">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-zest-500 rounded-full flex items-center justify-center z-10">
+                            <span class="text-white font-bold">1</span>
+                        </div>
+                        <div class="ml-4 bg-zest-50 p-4 rounded-lg flex-1">
+                            <h5 class="font-bold text-gray-900">Semaine 1 : Audit & Configuration</h5>
+                            <p class="text-gray-600 text-sm">Analyse de vos processus et mise en place des premières automatisations</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Étape 2 -->
+                <div class="relative mb-8">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-zest-500 rounded-full flex items-center justify-center z-10">
+                            <span class="text-white font-bold">2</span>
+                        </div>
+                        <div class="ml-4 bg-zest-50 p-4 rounded-lg flex-1">
+                            <h5 class="font-bold text-gray-900">Semaine 2 : Formation & Tests</h5>
+                            <p class="text-gray-600 text-sm">Prise en main des outils et ajustements selon vos retours</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Étape 3 -->
+                <div class="relative mb-8">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-zest-500 rounded-full flex items-center justify-center z-10">
+                            <span class="text-white font-bold">3</span>
+                        </div>
+                        <div class="ml-4 bg-zest-50 p-4 rounded-lg flex-1">
+                            <h5 class="font-bold text-gray-900">Semaine 3 : Optimisation</h5>
+                            <p class="text-gray-600 text-sm">Ajustements fins et ajout d'automatisations complémentaires</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Étape 4 -->
+                <div class="relative">
+                    <div class="flex items-center">
+                        <div class="w-8 h-8 bg-zest-500 rounded-full flex items-center justify-center z-10">
+                            <span class="text-white font-bold">4</span>
+                        </div>
+                        <div class="ml-4 bg-zest-50 p-4 rounded-lg flex-1">
+                            <h5 class="font-bold text-gray-900">Semaine 4 : Autonomie</h5>
+                            <p class="text-gray-600 text-sm">Vous êtes autonome et commencez à voir les premiers résultats</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Statistiques supplémentaires -->
+        <div class="mt-12 grid md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+                <div class="text-4xl font-bold text-zest-500 mb-2">94%</div>
+                <p class="text-gray-600">de clients satisfaits après 1 mois</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+                <div class="text-4xl font-bold text-zest-500 mb-2">-60%</div>
+                <p class="text-gray-600">de temps passé en tâches administratives</p>
+            </div>
+            <div class="bg-white rounded-xl p-6 shadow-sm text-center">
+                <div class="text-4xl font-bold text-zest-500 mb-2">+35%</div>
+                <p class="text-gray-600">de taux de transformation des devis</p>
+            </div>
+        </div>
+
+        <!-- Témoignages supplémentaires -->
+        <div class="mt-12 grid md:grid-cols-2 gap-6">
+            <!-- Témoignage 1 -->
+            <div class="bg-white rounded-xl p-6 shadow-sm">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white font-bold">M</span>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-900">Marie L.</p>
+                        <p class="text-sm text-gray-600">Coiffeuse, 8 ans d'expérience</p>
+                    </div>
+                </div>
+                <blockquote class="text-gray-600 italic">
+                    "J'ai récupéré 10h par semaine sur la gestion de mes rendez-vous et le suivi client. 
+                    Mes clients sont plus fidèles car je ne les oublie plus !"
+                </blockquote>
+                <div class="mt-4 text-sm text-zest-600">
+                    Gain : 10h/semaine • +40% de fidélisation
+                </div>
+            </div>
+
+            <!-- Témoignage 2 -->
+            <div class="bg-white rounded-xl p-6 shadow-sm">
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                        <span class="text-white font-bold">T</span>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-900">Thomas R.</p>
+                        <p class="text-sm text-gray-600">Électricien, 12 ans d'expérience</p>
+                    </div>
+                </div>
+                <blockquote class="text-gray-600 italic">
+                    "Les relances automatiques m'ont permis de transformer 30% de mes devis en plus. 
+                    Le plus simple ? Je n'ai rien eu à faire !"
+                </blockquote>
+                <div class="mt-4 text-sm text-zest-600">
+                    Gain : 8h/semaine • +30% de transformation
+                </div>
+            </div>
+        </div>
+
+        <!-- Exemples de gains concrets -->
+        <div class="mt-12 bg-white rounded-xl p-6 shadow-sm">
+            <h4 class="text-xl font-bold text-gray-900 mb-6">
+                Exemples concrets de gains
+            </h4>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h5 class="font-bold text-gray-900 mb-2">📊 Suivi des devis</h5>
+                    <ul class="text-gray-600 text-sm space-y-2">
+                        <li>• Relance automatique J+2</li>
+                        <li>• Suivi personnalisé selon le montant</li>
+                        <li>• Alertes pour les devis en attente</li>
+                        <li class="font-semibold text-zest-600">Gain : 2h/semaine</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h5 class="font-bold text-gray-900 mb-2">📅 Gestion des RDV</h5>
+                    <ul class="text-gray-600 text-sm space-y-2">
+                        <li>• SMS de rappel automatique</li>
+                        <li>• Confirmation par email</li>
+                        <li>• Réorganisation intelligente</li>
+                        <li class="font-semibold text-zest-600">Gain : 3h/semaine</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h5 class="font-bold text-gray-900 mb-2">💬 Suivi client</h5>
+                    <ul class="text-gray-600 text-sm space-y-2">
+                        <li>• Emails de satisfaction</li>
+                        <li>• Relances de fidélisation</li>
+                        <li>• Rappels de maintenance</li>
+                        <li class="font-semibold text-zest-600">Gain : 2h/semaine</li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4">
+                    <h5 class="font-bold text-gray-900 mb-2">📝 Facturation</h5>
+                    <ul class="text-gray-600 text-sm space-y-2">
+                        <li>• Génération automatique</li>
+                        <li>• Relances d'impayés</li>
+                        <li>• Suivi du CA en temps réel</li>
+                        <li class="font-semibold text-zest-600">Gain : 1h/semaine</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Pricing -->
+        <Pricing 
+            title="Choisissez votre formule"
+            subtitle="Apprenez à le créer ou on s'en charge pour vous"
+            plans={pricingPlans}
+            guarantee={{
+                text: "Garantie \"Opérationnel ou Remboursé\" 30 jours",
+                icon: "🛡️"
+            }}
+        />
     </main>
 
     <style>
