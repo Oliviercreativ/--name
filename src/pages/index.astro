@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import CRMBenefits from '../components/CRMBenefits.astro';
 import MetiersCarousel from '../components/MetiersCarousel.astro';
 import FAQ from '../components/FAQ.astro';
+import ProblemeSolution from '../components/ProblemeSolution.astro';
 import Formule from '../components/Formule.astro';
 import CtaFullPage from '../components/CtaFullPage.astro';
 import CasClient from '../components/CasClient.astro';
@@ -19,7 +20,7 @@ import Newsletter from '../components/Newsletter.astro';
   <section class="hero-pattern bg-white">
     <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:py-32">
       <div class="text-center">
-        <h1 class="mb-8 text-5xl font-black leading-tight text-cryan-900 lg:text-7xl">
+        <h1 class="text-cryan-900 mb-8 text-5xl font-black leading-tight lg:text-7xl">
           Economisez et créez votre CRM
           <span class="gradient-text">avec Airtable</span>
         </h1>
@@ -32,15 +33,15 @@ import Newsletter from '../components/Newsletter.astro';
         <!-- Stats -->
         <div class="mb-16 flex items-center justify-center space-x-12">
           <div class="text-center">
-            <div class="text-3xl font-bold text-cryan-900">100+</div>
+            <div class="text-cryan-900 text-3xl font-bold">100+</div>
             <div class="text-sm text-gray-600">Entreprises formées</div>
           </div>
           <div class="text-center">
-            <div class="text-3xl font-bold text-cryan-900">600€</div>
+            <div class="text-cryan-900 text-3xl font-bold">600€</div>
             <div class="text-sm text-gray-600">Économies moyennes par ans</div>
           </div>
           <div class="text-center">
-            <div class="text-3xl font-bold text-cryan-900">4h</div>
+            <div class="text-cryan-900 text-3xl font-bold">4h</div>
             <div class="text-sm text-gray-600">Pour le créer</div>
           </div>
         </div>
@@ -64,159 +65,59 @@ import Newsletter from '../components/Newsletter.astro';
     </div>
   </section>
 
-  <!-- Problem/Solution -->
-  <section class="bg-gray-50 py-20 lg:py-32">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6">
-      <div class="grid items-center gap-16 lg:grid-cols-2">
-        <!-- Problem -->
-        <div>
-          <h2 class="mb-8 text-4xl font-bold text-cryan-900">
-            Les CRM qu'on utilise à<br />
-            <span class="text-red-600">50% de leur capacité</span>
-          </h2>
-
-          <div class="space-y-6">
-            <div class="flex items-start space-x-4">
-              <div
-                class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-red-100"
-              >
-                <span class="font-bold text-red-600">×</span>
-              </div>
-              <div>
-                <h3 class="mb-1 font-semibold text-cryan-900">80€/mois minimum</h3>
-                <p class="text-gray-600">
-                  4800€ sur 5 ans pour des fonctions que vous n'utilisez pas
-                </p>
-              </div>
-            </div>
-
-            <div class="flex items-start space-x-4">
-              <div
-                class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-red-100"
-              >
-                <span class="font-bold text-red-600">×</span>
-              </div>
-              <div>
-                <h3 class="mb-1 font-semibold text-cryan-900">CRM générique</h3>
-                <p class="text-gray-600">Aucune évolution possible</p>
-              </div>
-            </div>
-
-            <div class="flex items-start space-x-4">
-              <div
-                class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-red-100"
-              >
-                <span class="font-bold text-red-600">×</span>
-              </div>
-              <div>
-                <h3 class="mb-1 font-semibold text-cryan-900">Données prisonnières</h3>
-                <p class="text-gray-600">
-                  Vos données sont prisionnières dans le CRM, et si vous souhaitez changer ?
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Solution -->
-        <div>
-          <h2 class="mb-8 text-4xl font-bold text-cryan-900">
-            Votre CRM<br />
-            <span class="gradient-text">pour votre activité</span>
-          </h2>
-
-          <div class="space-y-6">
-            <div class="flex items-start space-x-4">
-              <div
-                class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100"
-              >
-                <span class="font-bold text-green-600">✓</span>
-              </div>
-              <div>
-                <h3 class="mb-1 font-semibold text-cryan-900">Gratuit</h3>
-                <p class="text-gray-600">Formation payante mais l'utisation du CRM est gratuite</p>
-              </div>
-            </div>
-
-            <div class="flex items-start space-x-4">
-              <div
-                class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100"
-              >
-                <span class="font-bold text-green-600">✓</span>
-              </div>
-              <div>
-                <h3 class="mb-1 font-semibold text-cryan-900">Personnalisé à votre activité</h3>
-                <p class="text-gray-600">Des templates adaptés à votre secteur d'activité</p>
-              </div>
-            </div>
-
-            <div class="flex items-start space-x-4">
-              <div
-                class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100"
-              >
-                <span class="font-bold text-green-600">✓</span>
-              </div>
-              <div>
-                <h3 class="mb-1 font-semibold text-cryan-900">Evolutif selon vos besoins</h3>
-                <p class="text-gray-600">Vous pouvez modifier votre CRM à tout moment</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <BeforeAfter />
+  <ProblemeSolution />
+  
   <!-- CRMBenefits -->
-  <section id="metiers" class="bg-white py-20">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6">
-      <CRMBenefits />
-      <BeforeAfter />
-    </div>
-  </section>
+    <section id="metiers" class="bg-white py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <CRMBenefits />
+      </div>
+    </section>
 
-  <CasClient />
+    <CasClient />
 
-  <Formule />
+    <Formule />
 
-  <!-- Métiers -->
-  <section id="metiers" class="bg-white py-20 lg:py-32">
-    <div class="mx-auto max-w-7xl px-4 sm:px-6">
-      <MetiersCarousel />
-      <CtaFullPage />
-    </div>
-  </section>
+    <!-- Métiers -->
+    <section id="metiers" class="bg-white py-20 lg:py-32">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <MetiersCarousel />
+        <CtaFullPage />
+      </div>
+    </section>
 
-  <Formule />
+    <Formule />
 
-  <!-- FAQ -->
-  <section class="bg-white py-20 lg:py-32">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6">
-      <FAQ />
-    </div>
-  </section>
-  <CtaFullPage />
-  <Newsletter />
+    <!-- FAQ -->
+    <section class="bg-white py-20 lg:py-32">
+      <div class="mx-auto max-w-6xl px-4 sm:px-6">
+        <FAQ />
+      </div>
+    </section>
+    <CtaFullPage />
+    <Newsletter />
+  </BeforeAfter>
+
+  <style>
+    .gradient-text {
+      background: linear-gradient(135deg, #f97316, #ea580c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-pattern {
+      background-image:
+        radial-gradient(circle at 25px 25px, rgba(249, 115, 22, 0.1) 2%, transparent 0%),
+        radial-gradient(circle at 75px 75px, rgba(234, 88, 12, 0.1) 2%, transparent 0%);
+      background-size: 100px 100px;
+    }
+  </style>
+
+  <script>
+    function bookMeeting() {
+      window.location.href = 'https://calendly.com/olivierdemontant/30min';
+    }
+  </script>
 </Layout>
-
-<style>
-  .gradient-text {
-    background: linear-gradient(135deg, #f97316, #ea580c);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .hero-pattern {
-    background-image:
-      radial-gradient(circle at 25px 25px, rgba(249, 115, 22, 0.1) 2%, transparent 0%),
-      radial-gradient(circle at 75px 75px, rgba(234, 88, 12, 0.1) 2%, transparent 0%);
-    background-size: 100px 100px;
-  }
-</style>
-
-<script>
-  function bookMeeting() {
-    window.location.href = 'https://calendly.com/olivierdemontant/30min';
-  }
-</script>
