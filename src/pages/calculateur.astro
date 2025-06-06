@@ -362,7 +362,8 @@ const description = "Calculez précisément combien ZestCRM peut vous faire éco
 
         // Formatage euros
         function formatEuros(amount) {
-            return Math.round(amount).toLocaleString('fr-FR') + '€';
+            // Version plus compatible qui ne dépend pas de toLocaleString
+            return Math.round(amount).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ' ') + '€';
         }
 
         // Insights personnalisés
@@ -421,18 +422,43 @@ const description = "Calculez précisément combien ZestCRM peut vous faire éco
             element.addEventListener('change', calculateROI);
         });
 
-        // Animation d'entrée au chargement
-        document.addEventListener('DOMContentLoaded', function() {
+        // Animation d'entrée au chargement avec vérification supplémentaire
+        function initCalculator() {
             // Pré-remplir avec des valeurs d'exemple pour démonstration
             setTimeout(() => {
-                document.getElementById('currentCRM').value = '80';
-                document.getElementById('weeklyHours').value = '6';
-                document.getElementById('hourlyRate').value = '45';
-                document.getElementById('lostProspects').value = '25';
-                document.getElementById('avgClientValue').value = '1200';
-                calculateROI();
-            }, 1000);
-        });
+                // Vérification que les éléments existent avant de les manipuler
+                if (document.getElementById('currentCRM') && 
+                    document.getElementById('weeklyHours') && 
+                    document.getElementById('hourlyRate') && 
+                    document.getElementById('lostProspects') && 
+                    document.getElementById('avgClientValue')) {
+                    
+                    document.getElementById('currentCRM').value = '80';
+                    document.getElementById('weeklyHours').value = '6';
+                    document.getElementById('hourlyRate').value = '45';
+                    document.getElementById('lostProspects').value = '25';
+                    document.getElementById('avgClientValue').value = '1200';
+                    calculateROI();
+                } else {
+                    console.log('Les éléments ne sont pas encore chargés, nouvelle tentative dans 200ms');
+                    setTimeout(initCalculator, 200);
+                }
+            }, 500);
+        }
+        
+        // Utiliser à la fois DOMContentLoaded et window.onload pour plus de fiabilité
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initCalculator);
+        } else {
+            initCalculator();
+        }
+        
+        // Backup avec window.onload au cas où
+        window.onload = function() {
+            if (!document.getElementById('currentCRM').value) {
+                initCalculator();
+            }
+        };
     </script>
 </body>
 </html>
