@@ -1,0 +1,33 @@
+---
+// src/components/CTA.astro
+---
+
+<section id="CTA">
+    <!-- CTA -->
+    <div
+      class="mt-20  bg-gradient-to-r from-zest-500 to-orange-600 p-12 text-center shadow-2xl transition-all duration-300 hover:scale-[1.02]"
+    >
+      <h3 class="mb-6 text-3xl font-bold text-white md:text-4xl">
+        Prêt à transformer votre gestion client ?
+      </h3>
+      <p class="mx-auto mb-8 max-w-2xl text-xl text-white/90">
+        <strong>Votre métier n'est pas listé ?</strong><br> On crée votre template personnalisé en 48h !
+      </p>
+      <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+        <button
+          onclick="bookMeeting()"
+          class="w-full rounded-xl bg-white px-8 py-4 text-lg font-bold text-zest-600 shadow-lg transition-colors hover:bg-gray-100 hover:shadow-xl sm:w-auto"
+        >
+          Voir si votre métier est supporté →
+        </button>
+        <a
+          href="#contact"
+          class="w-full rounded-xl border-2 border-white px-8 py-4 text-center text-lg font-bold text-white transition-colors hover:bg-white/10 sm:w-auto"
+        >
+          Discuter de votre projet
+        </a>
+      </div>
+      <p class="mt-6 text-sm text-white/80">Plus de 500 professionnels nous font déjà confiance</p>
+    </div>
+  </div>
+</section>
