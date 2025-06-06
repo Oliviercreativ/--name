@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
+import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
   site: 'https://zestcrm.fr',
@@ -21,6 +22,15 @@ export default defineConfig({
     }),
   ],
   output: 'server',
+  adapter: vercel({
+    analytics: true,
+    webAnalytics: {
+      enabled: true,
+    },
+    speedInsights: {
+      enabled: true,
+    },
+  }),
   compressHTML: true,
   build: {
     assets: 'assets',
