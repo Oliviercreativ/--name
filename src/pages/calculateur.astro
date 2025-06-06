@@ -1,5 +1,7 @@
 ---
 // src/pages/calculateur.astro
+import '../styles/global.css';
+
 const title = "Calculateur ROI ZestCRM - Économies Temps et Argent";
 const description = "Calculez précisément combien ZestCRM peut vous faire économiser en temps et en argent vs votre CRM actuel ou l'absence de CRM.";
 ---
@@ -10,25 +12,6 @@ const description = "Calculez précisément combien ZestCRM peut vous faire éco
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description}>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        zest: {
-                            50: '#fff7ed',
-                            100: '#ffedd5',
-                            500: '#f97316',
-                            600: '#ea580c',
-                            700: '#c2410c',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
     
     <style>
         .gradient-text {
