@@ -1,0 +1,263 @@
+---
+// src/components/CasClient.astro
+---
+
+<section class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl lg:text-5xl font-bold text-cryan-900 mb-6">
+                Ils nous font <span class="gradient-text">confiance</span>
+            </h2>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Découvrez comment nos solutions ont transformé leur quotidien
+            </p>
+        </div>
+
+        <!-- Tabs Navigation -->
+        <div class="flex justify-center mb-12">
+            <div class="inline-flex rounded-lg bg-white p-1 shadow-lg">
+                <button class="tab-button active px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300" data-tab="artisans">
+                    Artisans
+                </button>
+                <button class="tab-button px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300" data-tab="pme">
+                    PME/TPE
+                </button>
+                <button class="tab-button px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300" data-tab="entreprises">
+                    Moyennes Entreprises
+                </button>
+            </div>
+        </div>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Artisans Tab -->
+            <div class="tab-pane active" id="artisans">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Ébéniste -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="text-4xl mr-4">🪚</div>
+                            <h4 class="text-xl font-bold text-cryan-900">Artisan Ébéniste</h4>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Défi</h5>
+                                <p class="text-gray-600">Suivi manuel des commandes et des étapes de fabrication, entraînant des retards et des erreurs.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Solution</h5>
+                                <p class="text-gray-600">Création d'une base de données sur Airtable pour suivre chaque commande et automatiser les notifications aux clients sur l'avancement de leur projet.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Résultats</h5>
+                                <p class="text-gray-600">Gain de temps significatif dans la gestion des commandes et augmentation de la satisfaction des clients grâce à une communication transparente.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Électricien -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="text-4xl mr-4">⚡</div>
+                            <h4 class="text-xl font-bold text-cryan-900">Artisan Électricien</h4>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Défi</h5>
+                                <p class="text-gray-600">Difficulté à gérer les rendez-vous et à maintenir un inventaire précis des fournitures.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Solution</h5>
+                                <p class="text-gray-600">Utilisation d'Airtable pour planifier les interventions et surveiller les niveaux de stock, avec des alertes automatiques pour réapprovisionner les articles en rupture.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Résultats</h5>
+                                <p class="text-gray-600">Optimisation de la gestion des stocks et réduction des temps d'attente pour les clients.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PME/TPE Tab -->
+            <div class="tab-pane hidden" id="pme">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Pâtisserie -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="text-4xl mr-4">🍰</div>
+                            <h4 class="text-xl font-bold text-cryan-900">Pâtisserie de Quartier</h4>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Défi</h5>
+                                <p class="text-gray-600">Coordination des commandes en ligne et en boutique, ainsi que la logistique des livraisons.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Solution</h5>
+                                <p class="text-gray-600">Centralisation des commandes via Airtable et automatisation des confirmations et des suivis de livraison.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Résultats</h5>
+                                <p class="text-gray-600">Diminution des erreurs de commande et amélioration de l'efficacité des livraisons, conduisant à une meilleure expérience client.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Studio Design -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="text-4xl mr-4">🎨</div>
+                            <h4 class="text-xl font-bold text-cryan-900">Studio de Design Graphique</h4>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Défi</h5>
+                                <p class="text-gray-600">Collaboration et suivi des projets entre les membres de l'équipe dispersés.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Solution</h5>
+                                <p class="text-gray-600">Mise en place d'un tableau de bord de projets sur Airtable pour suivre les tâches et les échéances, avec des rappels automatiques pour les tâches à venir.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Résultats</h5>
+                                <p class="text-gray-600">Amélioration de la collaboration et respect des délais de projet, augmentant ainsi la productivité globale.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moyennes Entreprises Tab -->
+            <div class="tab-pane hidden" id="entreprises">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Cabinet Conseil -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="text-4xl mr-4">💼</div>
+                            <h4 class="text-xl font-bold text-cryan-900">Cabinet de Conseil en Technologie</h4>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Défi</h5>
+                                <p class="text-gray-600">Gestion complexe des ressources et des projets pour divers clients.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Solution</h5>
+                                <p class="text-gray-600">Utilisation d'Airtable pour suivre les projets, allouer les ressources et générer des rapports automatiques pour les clients.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Résultats</h5>
+                                <p class="text-gray-600">Meilleure visibilité sur l'état d'avancement des projets et optimisation de l'utilisation des ressources humaines.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Distribution -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="flex items-center mb-6">
+                            <div class="text-4xl mr-4">📦</div>
+                            <h4 class="text-xl font-bold text-cryan-900">Entreprise de Distribution</h4>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Défi</h5>
+                                <p class="text-gray-600">Suivi des livraisons et gestion des stocks dans plusieurs entrepôts.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Solution</h5>
+                                <p class="text-gray-600">Base de données Airtable pour le suivi des expéditions et la gestion des stocks, avec des alertes automatiques pour les retards et les niveaux de stock critiques.</p>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-zest-600 mb-2">Résultats</h5>
+                                <p class="text-gray-600">Réduction des retards de livraison et amélioration de la gestion des stocks, conduisant à une augmentation de l'efficacité opérationnelle.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .gradient-text {
+        background: linear-gradient(135deg, #f97316, #ea580c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .tab-button {
+        color: #6B7280;
+    }
+
+    .tab-button.active {
+        background-color: #f97316;
+        color: white;
+    }
+
+    .tab-pane {
+        display: none;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .tab-pane.active {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        function showTab(tabId: string) {
+            // Hide all panes
+            tabPanes.forEach(pane => {
+                pane.classList.remove('active');
+                if (pane instanceof HTMLElement) {
+                    pane.style.display = 'none';
+                }
+            });
+
+            // Show selected pane
+            const activePane = document.getElementById(tabId);
+            if (activePane instanceof HTMLElement) {
+                activePane.style.display = 'block';
+                // Force reflow
+                activePane.offsetHeight;
+                activePane.classList.add('active');
+            }
+        }
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                // Show corresponding pane
+                const tabId = button.getAttribute('data-tab');
+                if (tabId) {
+                    showTab(tabId);
+                }
+            });
+        });
+
+        // Show first tab by default
+        const firstTab = tabButtons[0];
+        if (firstTab) {
+            const defaultTabId = firstTab.getAttribute('data-tab');
+            if (defaultTabId) {
+                showTab(defaultTabId);
+            }
+        }
+    });
+</script>

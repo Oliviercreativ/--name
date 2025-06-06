@@ -5,191 +5,198 @@ import CRMBenefits from '../components/CRMBenefits.astro';
 import MetiersCarousel from '../components/MetiersCarousel.astro';
 import FAQ from '../components/FAQ.astro';
 import Formule from '../components/Formule.astro';
-import CtaFullPage from '../components/CtaFullPage.astro'
+import CtaFullPage from '../components/CtaFullPage.astro';
+import CasClient from '../components/CasClient.astro';
+import BeforeAfter from '../components/BeforeAfter.astro';
+import Newsletter from '../components/Newsletter.astro';
 ---
 
 <Layout
-    title="ZestCRM - Créez votre CRM gratuit adapté à votre métier"
-    description="Pourquoi payer 80€/mois quand vous pouvez créer votre CRM gratuit ? Formation ou service clé en main pour artisans, agents immobiliers, consultants."
-    >
-    <!-- Hero Section -->
-    <section class="hero-pattern bg-white">
-        <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:py-32">
-        <div class="text-center">
-            <h1 class="mb-8 text-5xl font-black leading-tight text-gray-900 lg:text-7xl">
-            Economisez et créez votre CRM
-            <span class="gradient-text">avec Airtable</span>
-            </h1>
+  title="ZestCRM - Créez votre CRM gratuit adapté à votre métier"
+  description="Pourquoi payer 80€/mois quand vous pouvez créer votre CRM gratuit ? Formation ou service clé en main pour artisans, agents immobiliers, consultants."
+>
+  <!-- Hero Section -->
+  <section class="hero-pattern bg-white">
+    <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:py-32">
+      <div class="text-center">
+        <h1 class="mb-8 text-5xl font-black leading-tight text-cryan-900 lg:text-7xl">
+          Economisez et créez votre CRM
+          <span class="gradient-text">avec Airtable</span>
+        </h1>
 
-            <p class="mx-auto mb-12 max-w-4xl text-xl leading-relaxed text-gray-600 lg:text-2xl">
-            J'accompagne les enteprises et les entrepreneurs a créer leur CRM selon leurs besoins pour
-            gagner du temps et optimiser leurs productivités. <br />
-            </p>
+        <p class="mx-auto mb-12 max-w-4xl text-xl leading-relaxed text-gray-600 lg:text-2xl">
+          J'accompagne les enteprises et les entrepreneurs a créer leur CRM selon leurs besoins pour
+          gagner du temps et optimiser leurs productivités. <br />
+        </p>
 
-            <!-- Stats -->
-            <div class="mb-16 flex items-center justify-center space-x-12">
-            <div class="text-center">
-                <div class="text-3xl font-bold text-gray-900">100+</div>
-                <div class="text-sm text-gray-600">Entreprises formées</div>
-            </div>
-            <div class="text-center">
-                <div class="text-3xl font-bold text-gray-900">600€</div>
-                <div class="text-sm text-gray-600">Économies moyennes par ans</div>
-            </div>
-            <div class="text-center">
-                <div class="text-3xl font-bold text-gray-900">4h</div>
-                <div class="text-sm text-gray-600">Pour le créer</div>
-            </div>
-            </div>
-
-            <!-- CTA -->
-            <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <button
-                onclick="bookMeeting()"
-                class="transform rounded-lg bg-zest-500 px-8 py-4 text-lg font-semibold text-white transition-all hover:scale-105 hover:bg-zest-600"
-            >
-                Voir comment ça marche
-            </button>
-            <a
-                href="/calculateur"
-                class="inline-block rounded-lg px-8 py-4 text-lg font-semibold text-zest-600 transition-colors hover:bg-zest-50"
-            >
-                Calculer mes économies →
-            </a>
-            </div>
+        <!-- Stats -->
+        <div class="mb-16 flex items-center justify-center space-x-12">
+          <div class="text-center">
+            <div class="text-3xl font-bold text-cryan-900">100+</div>
+            <div class="text-sm text-gray-600">Entreprises formées</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-cryan-900">600€</div>
+            <div class="text-sm text-gray-600">Économies moyennes par ans</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold text-cryan-900">4h</div>
+            <div class="text-sm text-gray-600">Pour le créer</div>
+          </div>
         </div>
+
+        <!-- CTA -->
+        <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <button
+            onclick="bookMeeting()"
+            class="transform rounded-lg bg-zest-500 px-8 py-4 text-lg font-semibold text-white transition-all hover:scale-105 hover:bg-zest-600"
+          >
+            Voir comment ça marche
+          </button>
+          <a
+            href="/calculateur"
+            class="inline-block rounded-lg px-8 py-4 text-lg font-semibold text-zest-600 transition-colors hover:bg-zest-50"
+          >
+            Calculer mes économies →
+          </a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Problem/Solution -->
-    <section class="bg-gray-50 py-20 lg:py-32">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6">
-        <div class="grid items-center gap-16 lg:grid-cols-2">
-            <!-- Problem -->
-            <div>
-            <h2 class="mb-8 text-4xl font-bold text-gray-900">
-                Les CRM qu'on utilise à<br />
-                <span class="text-red-600">50% de leur capacité</span>
-            </h2>
+  <!-- Problem/Solution -->
+  <section class="bg-gray-50 py-20 lg:py-32">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <div class="grid items-center gap-16 lg:grid-cols-2">
+        <!-- Problem -->
+        <div>
+          <h2 class="mb-8 text-4xl font-bold text-cryan-900">
+            Les CRM qu'on utilise à<br />
+            <span class="text-red-600">50% de leur capacité</span>
+          </h2>
 
-            <div class="space-y-6">
-                <div class="flex items-start space-x-4">
-                <div
-                    class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-red-100"
-                >
-                    <span class="font-bold text-red-600">×</span>
-                </div>
-                <div>
-                    <h3 class="mb-1 font-semibold text-gray-900">80€/mois minimum</h3>
-                    <p class="text-gray-600">
-                    4800€ sur 5 ans pour des fonctions que vous n'utilisez pas
-                    </p>
-                </div>
-                </div>
-
-                <div class="flex items-start space-x-4">
-                <div
-                    class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-red-100"
-                >
-                    <span class="font-bold text-red-600">×</span>
-                </div>
-                <div>
-                    <h3 class="mb-1 font-semibold text-gray-900">CRM générique</h3>
-                    <p class="text-gray-600">Aucune évolution possible</p>
-                </div>
-                </div>
-
-                <div class="flex items-start space-x-4">
-                <div
-                    class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-red-100"
-                >
-                    <span class="font-bold text-red-600">×</span>
-                </div>
-                <div>
-                    <h3 class="mb-1 font-semibold text-gray-900">Données prisonnières</h3>
-                    <p class="text-gray-600">
-                    Vos données sont prisionnières dans le CRM, et si vous souhaitez changer ?
-                    </p>
-                </div>
-                </div>
-            </div>
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div
+                class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-red-100"
+              >
+                <span class="font-bold text-red-600">×</span>
+              </div>
+              <div>
+                <h3 class="mb-1 font-semibold text-cryan-900">80€/mois minimum</h3>
+                <p class="text-gray-600">
+                  4800€ sur 5 ans pour des fonctions que vous n'utilisez pas
+                </p>
+              </div>
             </div>
 
-            <!-- Solution -->
-            <div>
-            <h2 class="mb-8 text-4xl font-bold text-gray-900">
-                Votre CRM<br />
-                <span class="gradient-text">pour votre activité</span>
-            </h2>
-
-            <div class="space-y-6">
-                <div class="flex items-start space-x-4">
-                <div
-                    class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100"
-                >
-                    <span class="font-bold text-green-600">✓</span>
-                </div>
-                <div>
-                    <h3 class="mb-1 font-semibold text-gray-900">Gratuit</h3>
-                    <p class="text-gray-600">Formation payante mais l'utisation du CRM est gratuite</p>
-                </div>
-                </div>
-
-                <div class="flex items-start space-x-4">
-                <div
-                    class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100"
-                >
-                    <span class="font-bold text-green-600">✓</span>
-                </div>
-                <div>
-                    <h3 class="mb-1 font-semibold text-gray-900">Personnalisé à votre activité</h3>
-                    <p class="text-gray-600">Des templates adaptés à votre secteur d'activité</p>
-                </div>
-                </div>
-
-                <div class="flex items-start space-x-4">
-                <div
-                    class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100"
-                >
-                    <span class="font-bold text-green-600">✓</span>
-                </div>
-                <div>
-                    <h3 class="mb-1 font-semibold text-gray-900">Evolutif selon vos besoins</h3>
-                    <p class="text-gray-600">Vous pouvez modifier votre CRM à tout moment</p>
-                </div>
-                </div>
+            <div class="flex items-start space-x-4">
+              <div
+                class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-red-100"
+              >
+                <span class="font-bold text-red-600">×</span>
+              </div>
+              <div>
+                <h3 class="mb-1 font-semibold text-cryan-900">CRM générique</h3>
+                <p class="text-gray-600">Aucune évolution possible</p>
+              </div>
             </div>
+
+            <div class="flex items-start space-x-4">
+              <div
+                class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-red-100"
+              >
+                <span class="font-bold text-red-600">×</span>
+              </div>
+              <div>
+                <h3 class="mb-1 font-semibold text-cryan-900">Données prisonnières</h3>
+                <p class="text-gray-600">
+                  Vos données sont prisionnières dans le CRM, et si vous souhaitez changer ?
+                </p>
+              </div>
             </div>
+          </div>
         </div>
+
+        <!-- Solution -->
+        <div>
+          <h2 class="mb-8 text-4xl font-bold text-cryan-900">
+            Votre CRM<br />
+            <span class="gradient-text">pour votre activité</span>
+          </h2>
+
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4">
+              <div
+                class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100"
+              >
+                <span class="font-bold text-green-600">✓</span>
+              </div>
+              <div>
+                <h3 class="mb-1 font-semibold text-cryan-900">Gratuit</h3>
+                <p class="text-gray-600">Formation payante mais l'utisation du CRM est gratuite</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div
+                class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100"
+              >
+                <span class="font-bold text-green-600">✓</span>
+              </div>
+              <div>
+                <h3 class="mb-1 font-semibold text-cryan-900">Personnalisé à votre activité</h3>
+                <p class="text-gray-600">Des templates adaptés à votre secteur d'activité</p>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4">
+              <div
+                class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100"
+              >
+                <span class="font-bold text-green-600">✓</span>
+              </div>
+              <div>
+                <h3 class="mb-1 font-semibold text-cryan-900">Evolutif selon vos besoins</h3>
+                <p class="text-gray-600">Vous pouvez modifier votre CRM à tout moment</p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- CRMBenefits -->
-    <section id="metiers" class="bg-white py-20">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6">
-        <CRMBenefits />
-        </div>
-    </section>
+  <!-- CRMBenefits -->
+  <section id="metiers" class="bg-white py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <CRMBenefits />
+      <BeforeAfter />
+    </div>
+  </section>
 
-    <Formule />
+  <CasClient />
 
-    <!-- Métiers -->
-    <section id="metiers" class="bg-white py-20 lg:py-32">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6">
-        <MetiersCarousel />
-        </div>
-    </section>
+  <Formule />
 
-    <Formule />
+  <!-- Métiers -->
+  <section id="metiers" class="bg-white py-20 lg:py-32">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <MetiersCarousel />
+      <CtaFullPage />
+    </div>
+  </section>
 
-    <!-- FAQ -->
-    <section class="bg-white py-20 lg:py-32">
-        <div class="mx-auto max-w-6xl px-4 sm:px-6">
-        <FAQ />
-        </div>
-    </section>
+  <Formule />
 
-    <CtaFullPage />
+  <!-- FAQ -->
+  <section class="bg-white py-20 lg:py-32">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <FAQ />
+    </div>
+  </section>
+  <CtaFullPage />
+  <Newsletter />
 </Layout>
 
 <style>

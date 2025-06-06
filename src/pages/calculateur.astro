@@ -63,7 +63,7 @@ const description = "Calculez précisément combien ZestCRM peut vous faire éco
                     <div class="w-8 h-8 bg-zest-500 rounded-lg flex items-center justify-center">
                         <span class="text-white font-bold text-sm">Z</span>
                     </div>
-                    <span class="text-xl font-bold text-gray-900">ZestCRM</span>
+                    <span class="text-xl font-bold text-cryan-900">ZestCRM</span>
                 </div>
                 <a href="/" class="text-gray-600 hover:text-zest-500 transition-colors">← Retour à l'accueil</a>
             </div>
@@ -73,7 +73,7 @@ const description = "Calculez précisément combien ZestCRM peut vous faire éco
     <div class="max-w-5xl mx-auto px-4 py-12">
         <!-- Titre -->
         <div class="text-center mb-12">
-            <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+            <h1 class="text-4xl lg:text-5xl font-bold text-cryan-900 mb-4">
                 ⏱️💰 Calculez vos <span class="gradient-text">économies</span>
             </h1>
             <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -86,11 +86,11 @@ const description = "Calculez précisément combien ZestCRM peut vous faire éco
             <div class="grid lg:grid-cols-2 gap-12">
                 <!-- Inputs -->
                 <div class="space-y-8">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-6">📊 Vos informations actuelles</h2>
+                    <h2 class="text-2xl font-bold text-cryan-900 mb-6">📊 Vos informations actuelles</h2>
                     
                     <!-- CRM actuel -->
                     <div>
-                        <label for="currentCRM" class="block text-lg font-semibold text-gray-900 mb-3">
+                        <label for="currentCRM" class="block text-lg font-semibold text-cryan-900 mb-3">
                             💳 Coût CRM actuel (€/mois)
                         </label>
                         <input 
@@ -105,7 +105,7 @@ const description = "Calculez précisément combien ZestCRM peut vous faire éco
 
                     <!-- Temps de gestion par semaine -->
                     <div>
-                        <label for="weeklyHours" class="block text-lg font-semibold text-gray-900 mb-3">
+                        <label for="weeklyHours" class="block text-lg font-semibold text-cryan-900 mb-3">
                             ⏰ Temps gestion clients (heures/semaine)
                         </label>
                         <input 
@@ -120,7 +120,7 @@ const description = "Calculez précisément combien ZestCRM peut vous faire éco
 
                     <!-- Taux horaire -->
                     <div>
-                        <label for="hourlyRate" class="block text-lg font-semibold text-gray-900 mb-3">
+                        <label for="hourlyRate" class="block text-lg font-semibold text-cryan-900 mb-3">
                             💼 Votre taux horaire (€/h)
                         </label>
                         <input 
@@ -135,7 +135,7 @@ const description = "Calculez précisément combien ZestCRM peut vous faire éco
 
                     <!-- Prospects perdus -->
                     <div>
-                        <label for="lostProspects" class="block text-lg font-semibold text-gray-900 mb-3">
+                        <label for="lostProspects" class="block text-lg font-semibold text-cryan-900 mb-3">
                             😴 Prospects "oubliés" par mois (%)
                         </label>
                         <input 
@@ -150,7 +150,7 @@ const description = "Calculez précisément combien ZestCRM peut vous faire éco
 
                     <!-- Valeur client moyenne -->
                     <div>
-                        <label for="avgClientValue" class="block text-lg font-semibold text-gray-900 mb-3">
+                        <label for="avgClientValue" class="block text-lg font-semibold text-cryan-900 mb-3">
                             💰 Valeur client moyenne (€)
                         </label>
                         <input 
@@ -166,11 +166,11 @@ const description = "Calculez précisément combien ZestCRM peut vous faire éco
 
                 <!-- Résultats -->
                 <div class="bg-gradient-to-br from-zest-50 to-orange-50 rounded-2xl p-8">
-                    <h2 class="text-2xl font-bold text-gray-900 mb-8">🎯 Vos économies avec ZestCRM</h2>
+                    <h2 class="text-2xl font-bold text-cryan-900 mb-8">🎯 Vos économies avec ZestCRM</h2>
                     
                     <!-- Économies annuelles -->
                     <div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-4">💸 Économies financières</h3>
+                        <h3 class="text-lg font-semibold text-cryan-900 mb-4">💸 Économies financières</h3>
                         
                         <div class="grid grid-cols-2 gap-4 mb-4">
                             <div class="text-center">
@@ -191,7 +191,7 @@ const description = "Calculez précisément combien ZestCRM peut vous faire éco
 
                     <!-- Prospects récupérés -->
                     <div class="bg-white rounded-xl p-6 mb-6 shadow-sm">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-4">🎯 Revenus récupérés</h3>
+                        <h3 class="text-lg font-semibold text-cryan-900 mb-4">🎯 Revenus récupérés</h3>
                         
                         <div class="text-center">
                             <div id="recoveredRevenue" class="text-2xl font-bold text-zest-600 number-animate">0€</div>
@@ -199,14 +199,14 @@ const description = "Calculez précisément combien ZestCRM peut vous faire éco
                         </div>
                         
                         <div class="mt-4 text-center">
-                            <div id="recoveredProspects" class="text-lg font-semibold text-gray-900 number-animate">0</div>
+                            <div id="recoveredProspects" class="text-lg font-semibold text-cryan-900 number-animate">0</div>
                             <div class="text-sm text-gray-600">Prospects récupérés/an</div>
                         </div>
                     </div>
 
                     <!-- Temps gagné -->
                     <div class="bg-white rounded-xl p-6 shadow-sm">
-                        <h3 class="text-lg font-semibold text-gray-900 mb-4">⏰ Temps libéré</h3>
+                        <h3 class="text-lg font-semibold text-cryan-900 mb-4">⏰ Temps libéré</h3>
                         
                         <div class="grid grid-cols-2 gap-4">
                             <div class="text-center">
@@ -238,7 +238,7 @@ const description = "Calculez précisément combien ZestCRM peut vous faire éco
 
         <!-- Insights personnalisés -->
         <div id="insights" class="hidden bg-white rounded-2xl p-8 shadow-lg mb-8">
-            <h3 class="text-2xl font-bold text-gray-900 mb-6">💡 Analyse de votre situation</h3>
+            <h3 class="text-2xl font-bold text-cryan-900 mb-6">💡 Analyse de votre situation</h3>
             <div id="insightContent" class="text-gray-700 leading-relaxed"></div>
         </div>
 

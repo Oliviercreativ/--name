@@ -1,17 +1,19 @@
 ---
 // CRMBenefits.astro
+import { Icon } from 'astro-iconify';
 ---
+
 <section class="crm-benefits">
   <div class="container">
     <div class="header">
       <h2>Mais concrètement, à quoi ça sert un CRM ?</h2>
       <p>Découvrez comment un CRM transforme votre business au quotidien</p>
     </div>
-    
+
     <div class="content">
       <div class="benefits-grid">
         <div class="benefit-card">
-          <div class="benefit-icon">👥</div>
+          <div class="benefit-icon"><Icon name="mdi:account" class="text-white w-8" /></div>
           <h3>Gestion des contacts</h3>
           <ul class="benefit-list">
             <li>Centralisez tous vos prospects et clients en un seul endroit</li>
@@ -20,9 +22,9 @@
             <li>Fini les post-its et fichiers Excel éparpillés</li>
           </ul>
         </div>
-        
+
         <div class="benefit-card">
-          <div class="benefit-icon">📈</div>
+          <div class="benefit-icon"><Icon name="mdi:cash" class="text-white w-8" /></div>
           <h3>Suivi des ventes</h3>
           <ul class="benefit-list">
             <li>Pipeline visuel de vos opportunités commerciales</li>
@@ -31,9 +33,9 @@
             <li>Identification des goulots d'étranglement</li>
           </ul>
         </div>
-        
+
         <div class="benefit-card">
-          <div class="benefit-icon">⏰</div>
+          <div class="benefit-icon"><Icon name="mdi:task-auto" class="text-white w-8" /></div>
           <h3>Automatisation des tâches</h3>
           <ul class="benefit-list">
             <li>Relances automatiques des prospects inactifs</li>
@@ -42,9 +44,9 @@
             <li>Création automatique de devis et factures</li>
           </ul>
         </div>
-        
+
         <div class="benefit-card">
-          <div class="benefit-icon">📊</div>
+          <div class="benefit-icon"><Icon name="mdi:file-report-outline" class="text-white w-8" /></div>
           <h3>Reporting et analyse</h3>
           <ul class="benefit-list">
             <li>Tableaux de bord avec KPIs en temps réel</li>
@@ -53,9 +55,9 @@
             <li>Taux de conversion à chaque étape</li>
           </ul>
         </div>
-        
+
         <div class="benefit-card">
-          <div class="benefit-icon">🎯</div>
+          <div class="benefit-icon"><Icon pack="mdi" name="target-arrow" class="text-white w-8" /></div>
           <h3>Marketing ciblé</h3>
           <ul class="benefit-list">
             <li>Campagnes email personnalisées par segment</li>
@@ -64,9 +66,9 @@
             <li>Nurturing automatique des prospects froids</li>
           </ul>
         </div>
-        
+
         <div class="benefit-card">
-          <div class="benefit-icon">📱</div>
+          <div class="benefit-icon"><Icon name="mdi:cellphone-information" class="text-white w-8"  /></div>
           <h3>Mobilité et collaboration</h3>
           <ul class="benefit-list">
             <li>Accès depuis n'importe quel appareil</li>
@@ -76,11 +78,11 @@
           </ul>
         </div>
       </div>
-      
+
       <div class="stats-section">
         <h3>Résultats concrets avec un CRM</h3>
         <p>Voici ce que vous pouvez espérer :</p>
-        
+
         <div class="stats-grid">
           <div class="stat-item">
             <span class="stat-number">+27%</span>
@@ -110,48 +112,50 @@
     margin: 0 auto;
     padding: 0 20px;
   }
-  
+
   .header {
     text-align: center;
     margin-bottom: 60px;
   }
-  
+
   .header h2 {
     font-size: 2.5em;
     margin-bottom: 20px;
     font-weight: 700;
     color: #2c3e50;
   }
-  
+
   .header p {
     font-size: 1.2em;
     color: #666;
     max-width: 600px;
     margin: 0 auto;
   }
-  
+
   .benefits-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
     margin-bottom: 50px;
   }
-  
+
   .benefit-card {
     background: white;
     padding: 30px;
     border-radius: 15px;
     border: 1px solid #e9ecef;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
   }
-  
+
   .benefit-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
     border-color: #ff6b35;
   }
-  
+
   .benefit-icon {
     width: 60px;
     height: 60px;
@@ -163,19 +167,19 @@
     margin-bottom: 20px;
     font-size: 24px;
   }
-  
+
   .benefit-card h3 {
     font-size: 1.4em;
     margin-bottom: 15px;
     color: #2c3e50;
     font-weight: 600;
   }
-  
+
   .benefit-list {
     list-style: none;
     padding: 0;
   }
-  
+
   .benefit-list li {
     margin-bottom: 12px;
     padding-left: 25px;
@@ -183,16 +187,16 @@
     color: #555;
     line-height: 1.5;
   }
-  
+
   .benefit-list li:before {
-    content: "✓";
+    content: '✓';
     position: absolute;
     left: 0;
     color: #ff6b35;
     font-weight: bold;
     font-size: 1.1em;
   }
-  
+
   .stats-section {
     background: #ff6b35;
     color: white;
@@ -201,59 +205,59 @@
     text-align: center;
     margin-top: 40px;
   }
-  
+
   .stats-section h3 {
     font-size: 1.8em;
     margin-bottom: 10px;
     font-weight: 600;
   }
-  
+
   .stats-section p {
     font-size: 1.1em;
     opacity: 0.9;
     margin-bottom: 30px;
   }
-  
+
   .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
   }
-  
+
   .stat-item {
     text-align: center;
   }
-  
+
   .stat-number {
     font-size: 2.5em;
     font-weight: 700;
     margin-bottom: 10px;
     display: block;
   }
-  
+
   .stat-label {
     font-size: 1.1em;
     opacity: 0.9;
   }
-  
+
   @media (max-width: 768px) {
     .header h2 {
       font-size: 2em;
     }
-    
+
     .benefits-grid {
       grid-template-columns: 1fr;
       gap: 25px;
     }
-    
+
     .benefit-card {
       padding: 25px;
     }
-    
+
     .stats-section {
       padding: 30px 20px;
     }
-    
+
     .stat-number {
       font-size: 2em;
     }

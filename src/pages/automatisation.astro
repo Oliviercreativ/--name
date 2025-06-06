@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-
+import CtaFullPage from '../components/CtaFullPage.astro';
 const title = "Automatisation & Digitalisation | ZestCRM par Olivier";
 const description = "Découvrez comment j'aide les artisans et TPE à automatiser leur gestion client pour récupérer 8h+ par semaine. Exemples concrets et témoignages.";
 const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
@@ -17,7 +17,7 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
                         🤖 Automatisation simple, résultats immédiats
                     </div>
                     
-                    <h1 class="text-4xl lg:text-6xl font-black text-gray-900 mb-6 leading-tight">
+                    <h1 class="text-4xl lg:text-6xl font-black text-cryan-900 mb-6 leading-tight">
                         Récupérez <span class="gradient-text">8h par semaine</span><br>
                         sans devenir un expert tech
                     </h1>
@@ -30,19 +30,19 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
                     <!-- Stats personnels -->
                     <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-3xl mx-auto mb-12" role="list" aria-label="Statistiques clés">
                         <div class="text-center" role="listitem">
-                            <div class="text-3xl font-bold text-gray-900">8h</div>
+                            <div class="text-3xl font-bold text-cryan-900">8h</div>
                             <div class="text-sm text-gray-600">gagnées/semaine en moyenne</div>
                         </div>
                         <div class="text-center" role="listitem">
-                            <div class="text-3xl font-bold text-gray-900">0</div>
+                            <div class="text-3xl font-bold text-cryan-900">0</div>
                             <div class="text-sm text-gray-600">client oublié</div>
                         </div>
                         <div class="text-center" role="listitem">
-                            <div class="text-3xl font-bold text-gray-900">+25%</div>
+                            <div class="text-3xl font-bold text-cryan-900">+25%</div>
                             <div class="text-sm text-gray-600">taux de transformation</div>
                         </div>
                         <div class="text-center" role="listitem">
-                            <div class="text-3xl font-bold text-gray-900">4h</div>
+                            <div class="text-3xl font-bold text-cryan-900">4h</div>
                             <div class="text-sm text-gray-600">pour tout configurer</div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
         <section class="py-20 bg-white">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                    <h2 class="text-4xl font-bold text-cryan-900 mb-6">
                         Ma philosophie : <span class="gradient-text">Simple mais efficace</span>
                     </h2>
                     <p class="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -78,7 +78,7 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
                         <div class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-6 mx-auto">
                             <span class="text-white text-2xl">🎯</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Automatisation ciblée</h3>
+                        <h3 class="text-xl font-bold text-cryan-900 mb-4">Automatisation ciblée</h3>
                         <p class="text-gray-600 mb-4">
                             On automatise seulement ce qui vous fait vraiment perdre du temps. 
                             Pas de gadgets, que de l'utile.
@@ -91,7 +91,7 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
                         <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-6 mx-auto">
                             <span class="text-white text-2xl">⚡</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Configuration pour vous</h3>
+                        <h3 class="text-xl font-bold text-cryan-900 mb-4">Configuration pour vous</h3>
                         <p class="text-gray-600 mb-4">
                             Je configure tout moi-même avec Make/Zapier. Vous n'avez qu'à utiliser, 
                             pas besoin d'apprendre.
@@ -104,7 +104,7 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
                         <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mb-6 mx-auto">
                             <span class="text-white text-2xl">🔧</span>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-4">Évolutif et modifiable</h3>
+                        <h3 class="text-xl font-bold text-cryan-900 mb-4">Évolutif et modifiable</h3>
                         <p class="text-gray-600 mb-4">
                             Vos besoins changent ? On adapte. Pas de solution figée, 
                             tout évolue avec votre business.
@@ -119,7 +119,7 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
         <section id="exemples" class="py-20 bg-gray-50">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                    <h2 class="text-4xl font-bold text-cryan-900 mb-6">
                         Cas concrets de mes clients
                     </h2>
                     <p class="text-xl text-gray-600">
@@ -137,7 +137,7 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
                                         <span class="text-white font-bold">M</span>
                                     </div>
                                     <div>
-                                        <h3 class="text-xl font-bold text-gray-900">Marc - Plombier, Toulouse</h3>
+                                        <h3 class="text-xl font-bold text-cryan-900">Marc - Plombier, Toulouse</h3>
                                         <p class="text-gray-600">Entreprise individuelle, 15 ans d'expérience</p>
                                     </div>
                                 </div>
@@ -222,7 +222,7 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
                                         <span class="text-white font-bold">S</span>
                                     </div>
                                     <div>
-                                        <h3 class="text-xl font-bold text-gray-900">Sophie - Agent immobilier, Lyon</h3>
+                                        <h3 class="text-xl font-bold text-cryan-900">Sophie - Agent immobilier, Lyon</h3>
                                         <p class="text-gray-600">Agence indépendante, 8 ans d'expérience</p>
                                     </div>
                                 </div>
@@ -257,7 +257,7 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
                                         <span class="text-white font-bold">J</span>
                                     </div>
                                     <div>
-                                        <h3 class="text-xl font-bold text-gray-900">Jean - Consultant IT, Paris</h3>
+                                        <h3 class="text-xl font-bold text-cryan-900">Jean - Consultant IT, Paris</h3>
                                         <p class="text-gray-600">Freelance, 12 ans d'expérience</p>
                                     </div>
                                 </div>
@@ -315,7 +315,7 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
         <section class="py-20 bg-white">
             <div class="max-w-6xl mx-auto px-4 sm:px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-6">
+                    <h2 class="text-4xl font-bold text-cryan-900 mb-6">
                         Mes automatisations <span class="gradient-text">les plus demandées</span>
                     </h2>
                     <p class="text-xl text-gray-600">
@@ -327,7 +327,7 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
                     <!-- Automatisation 1 -->
                     <div class="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors">
                         <div class="text-4xl mb-4">📧</div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-3">Relances automatiques</h3>
+                        <h3 class="text-lg font-bold text-cryan-900 mb-3">Relances automatiques</h3>
                         <p class="text-gray-600 text-sm mb-4">
                             Devis envoyé → Relance J+2 → Relance J+7 → Relance J+30. 
                             +25% de transformation en moyenne.
@@ -338,7 +338,7 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
                     <!-- Automatisation 2 -->
                     <div class="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors">
                         <div class="text-4xl mb-4">💬</div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-3">SMS de rappel</h3>
+                        <h3 class="text-lg font-bold text-cryan-900 mb-3">SMS de rappel</h3>
                         <p class="text-gray-600 text-sm mb-4">
                             RDV planifié → SMS automatique 24h avant. 
                             -90% de rendez-vous manqués.
@@ -349,7 +349,7 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
                     <!-- Automatisation 3 -->
                     <div class="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors">
                         <div class="text-4xl mb-4">📄</div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-3">Génération documents</h3>
+                        <h3 class="text-lg font-bold text-cryan-900 mb-3">Génération documents</h3>
                         <p class="text-gray-600 text-sm mb-4">
                             Données saisies → Devis/facture auto-générés. 
                             Templates personnalisés à votre charte.
@@ -360,7 +360,7 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
                     <!-- Automatisation 4 -->
                     <div class="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors">
                         <div class="text-4xl mb-4">⭐</div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-3">Demandes d'avis</h3>
+                        <h3 class="text-lg font-bold text-cryan-900 mb-3">Demandes d'avis</h3>
                         <p class="text-gray-600 text-sm mb-4">
                             Travaux terminés → Email satisfaction J+3. 
                             Construction automatique de votre réputation.
@@ -371,7 +371,7 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
                     <!-- Automatisation 5 -->
                     <div class="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors">
                         <div class="text-4xl mb-4">🔔</div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-3">Alertes intelligentes</h3>
+                        <h3 class="text-lg font-bold text-cryan-900 mb-3">Alertes intelligentes</h3>
                         <p class="text-gray-600 text-sm mb-4">
                             Stock bas, impayé, anniversaire client, renouvellement contrat... 
                             Vous ne ratez plus rien.
@@ -382,7 +382,7 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
                     <!-- Automatisation 6 -->
                     <div class="bg-gray-50 rounded-xl p-6 hover:bg-gray-100 transition-colors">
                         <div class="text-4xl mb-4">📊</div>
-                        <h3 class="text-lg font-bold text-gray-900 mb-3">Reporting automatique</h3>
+                        <h3 class="text-lg font-bold text-cryan-900 mb-3">Reporting automatique</h3>
                         <p class="text-gray-600 text-sm mb-4">
                             Tableau de bord mis à jour en temps réel. 
                             CA, conversion, satisfaction... tout visible d'un coup d'œil.
@@ -393,31 +393,8 @@ const canonicalURL = new URL('automatisation', import.meta.env.SITE).href;
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section class="py-20 bg-zest-500">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-                <h2 class="text-4xl font-bold text-white mb-6">
-                    Prêt à récupérer 8h par semaine ?
-                </h2>
-                <p class="text-xl text-zest-100 mb-8">
-                    Calculez précisément combien de temps vous pourriez économiser 
-                    ou réservez un appel pour qu'on en discute
-                </p>
-                
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="/calculateur" class="bg-white text-zest-500 font-semibold py-4 px-8 rounded-xl text-lg hover:bg-gray-100 transition-colors">
-                        📊 Calculer mon gain de temps
-                    </a>
-                    <button onclick="bookMeeting()" class="border-2 border-white text-white font-semibold py-4 px-8 rounded-xl text-lg hover:bg-white hover:text-zest-500 transition-colors">
-                        📞 Discuter avec Olivier (30 min)
-                    </button>
-                </div>
-                
-                <p class="text-zest-100 mt-6 text-sm">
-                    ✅ Sans engagement • ✅ Audit gratuit de vos processus • ✅ Recommandations personnalisées
-                </p>
-            </div>
-        </section>
+        <CtaFullPage />
+
     </main>
 
     <style>
