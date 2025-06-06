@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
-import vercel from '@astrojs/vercel/serverless';
 
 export default defineConfig({
   site: 'https://zestcrm.fr',
@@ -21,24 +20,11 @@ export default defineConfig({
       },
     }),
   ],
-  output: 'server',
-  adapter: vercel({
-    analytics: true,
-    webAnalytics: {
-      enabled: true,
-    },
-    speedInsights: {
-      enabled: true,
-    },
-  }),
+  output: 'static', // Site statique pour de meilleures performances
   compressHTML: true,
   build: {
     assets: 'assets',
     inlineStylesheets: 'auto',
-  },
-  server: {
-    port: 4321,
-    host: true,
   },
   vite: {
     build: {

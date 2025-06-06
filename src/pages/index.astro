@@ -1,206 +1,610 @@
 ---
 // src/pages/index.astro
-import Layout from '../layouts/Layout.astro';
-import FAQ from '../components/FAQ.astro';
-import WhatAutomation from '../components/WhatAutomation.astro';
-import StripeCheckout from '../components/StripeCheckout.astro';
+title: "ZestCRM - Créez votre CRM gratuit adapté à votre métier"
+description: "Pourquoi payer 80€/mois quand vous pouvez créer votre CRM gratuit ? Formation ou service clé en main pour artisans, agents immobiliers, consultants."
 import CRMBenefits from '../components/CRMBenefits.astro';
 import MetiersCarousel from '../components/MetiersCarousel.astro';
-
-const title = 'ZestCRM - Votre CRM sur mesure';
-const description =
-  'Créez votre CRM personnalisé en quelques heures. Formation complète et support dédié pour automatiser votre gestion client.';
+import FAQ from '../components/FAQ.astro';
+import WhatAutomation from '../components/WhatAutomation.astro';
 ---
 
-<Layout title={title} description={description}>
-  <!-- Hero Section -->
-  <section class="py-20 text-white lg:py-32">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6">
-      <div class="text-center">
-        <h1 class="mb-8 text-5xl font-black leading-tight text-cyan-950 lg:text-7xl">
-          Créez votre CRM sur mesure
-        </h1>
-        <p class="mx-auto mb-12 max-w-3xl text-xl text-cyan-950 text-zest-100">
-          Plus besoin de payer des abonnements mensuels. Créez votre propre CRM adapté à votre
-          métier en quelques heures.
-        </p>
-        <div class="flex flex-col justify-center gap-4 text-cyan-950 sm:flex-row">
-          <button
-            onclick="bookMeeting()"
-            class="rounded-lg bg-white px-8 py-4 text-lg font-semibold text-zest-500 transition-colors hover:bg-gray-100"
-          >
-            Réserver ma consultation gratuite
-          </button>
-          <a
-            href="#formules"
-            class="inline-block rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-white hover:text-zest-500"
-          >
-            Voir les formules
-          </a>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZESTCRM</title>
+    <meta name="description" content="Créez votre CRM gratuit adapté à votre métier. Formation ou service clé en main pour artisans, agents immobiliers, consultants.">
+    
+    <!-- Tailwind CSS -->
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #f97316, #ea580c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-pattern {
+            background-image: 
+                radial-gradient(circle at 25px 25px, rgba(249, 115, 22, 0.1) 2%, transparent 0%),
+                radial-gradient(circle at 75px 75px, rgba(234, 88, 12, 0.1) 2%, transparent 0%);
+            background-size: 100px 100px;
+        }
+    </style>
+</head>
+
+<body class="bg-white font-sans antialiased">
+    <!-- Header -->
+    <header class="bg-white border-b border-gray-100 sticky top-0 z-50 backdrop-blur-md bg-white/95">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 bg-zest-500 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">Z</span>
+                    </div>
+                    <span class="text-xl font-bold text-gray-900">ZestCRM</span>
+                </div>
+                
+                <!-- Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#solution" class="text-gray-600 hover:text-gray-900 transition-colors">Solution</a>
+                    <a href="#metiers" class="text-gray-600 hover:text-gray-900 transition-colors">Métiers</a>
+                    <a href="#formules" class="text-gray-600 hover:text-gray-900 transition-colors">Formules</a>
+                    <button onclick="bookMeeting()" class="bg-zest-500 text-white px-4 py-2 rounded-lg hover:bg-zest-600 transition-colors font-medium">
+                        Prendre RDV
+                    </button>
+                </nav>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Benefits Section -->
-  <CRMBenefits />
+    <!-- Hero Section -->
+    <section class="bg-white hero-pattern">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-20 lg:py-32">
+            <div class="text-center">
+                <h1 class="text-5xl lg:text-7xl font-black text-gray-900 mb-8 leading-tight">
+                    Economisez et créez votre CRM
+                    <span class="gradient-text">avec Airtable</span>
+                </h1>
+                
+                <p class="text-xl lg:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
+                    J'accompagne les enteprises et les entrepreneurs a créer leur CRM selon leurs besoins pour gagner du temps et optimiser leurs productivités. <br>
+                </p>
 
-  <!-- Métiers Section -->
-  <MetiersCarousel />
+                <!-- Stats -->
+                <div class="flex justify-center items-center space-x-12 mb-16">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-900">100+</div>
+                        <div class="text-sm text-gray-600">Entreprises formées</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-900">600€</div>
+                        <div class="text-sm text-gray-600">Économies moyennes par ans</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gray-900">4h</div>
+                        <div class="text-sm text-gray-600">Pour le créer</div>
+                    </div>
+                </div>
 
-  <!-- Pricing Section -->
-  <section id="formules" class="bg-white py-20">
-    <div class="mx-auto max-w-6xl px-4 sm:px-6">
-      <div class="mb-16 text-center">
-        <h2 class="mb-6 text-4xl font-bold text-gray-900 lg:text-5xl">Choisissez votre formule</h2>
-        <p class="text-xl text-gray-600">Une solution adaptée à vos besoins</p>
-      </div>
-
-      <div class="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
-        <!-- DIY -->
-        <div class="rounded-2xl border-2 border-gray-100 bg-white p-8">
-          <div class="mb-8 text-center">
-            <h3 class="mb-2 text-2xl font-bold">Formation DIY</h3>
-            <div class="mb-2 text-4xl font-bold text-zest-500">497€</div>
-            <div class="text-gray-600">une fois, pas d'abonnement</div>
-          </div>
-
-          <ul class="mb-8 space-y-4">
-            <li class="flex items-center space-x-3">
-              <div class="flex h-5 w-5 items-center justify-center rounded-full bg-green-100">
-                <span class="text-xs font-bold text-green-600">✓</span>
-              </div>
-              <span>Formation complète</span>
-            </li>
-            <li class="flex items-center space-x-3">
-              <div class="flex h-5 w-5 items-center justify-center rounded-full bg-green-100">
-                <span class="text-xs font-bold text-green-600">✓</span>
-              </div>
-              <span>Support 30 jours</span>
-            </li>
-            <li class="flex items-center space-x-3">
-              <div class="flex h-5 w-5 items-center justify-center rounded-full bg-green-100">
-                <span class="text-xs font-bold text-green-600">✓</span>
-              </div>
-              <span>Accès à vie</span>
-            </li>
-          </ul>
-
-          <div class="mt-8">
-            <StripeCheckout
-              priceId="price_1QeXZQJZvIqXqXqXqXqXqXqX"
-              buttonText="Commencer maintenant"
-              planName="Formation DIY"
-              price={497}
-              features={[
-                'Accès à toutes les formations',
-                'Support communautaire',
-                'Mises à jour gratuites',
-                'Accès à vie',
-              ]}
-            />
-          </div>
+                <!-- CTA -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <button onclick="bookMeeting()" class="bg-zest-500 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-zest-600 transition-all transform hover:scale-105">
+                        Voir comment ça marche
+                    </button>
+                    <a href="/calculateur" class="text-zest-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-zest-50 transition-colors inline-block">
+                        Calculer mes économies →
+                    </a>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Done For You -->
-        <div class="relative rounded-2xl bg-zest-500 p-8 text-white">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2 transform">
-            <span class="rounded-full bg-white px-4 py-1 text-sm font-semibold text-zest-500">
-              Populaire
-            </span>
-          </div>
+    <!-- Problem/Solution -->
+    <section class="bg-gray-50 py-20 lg:py-32">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Problem -->
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-8">
+                        Les CRM qu'on utilise à<br>
+                        <span class="text-red-600">50% de leur capacité</span>
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-red-600 font-bold">×</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">80€/mois minimum</h3>
+                                <p class="text-gray-600">4800€ sur 5 ans pour des fonctions que vous n'utilisez pas</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-red-600 font-bold">×</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">CRM générique</h3>
+                                <p class="text-gray-600">Aucune évolution possible</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-red-600 font-bold">×</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Données prisonnières</h3>
+                                <p class="text-gray-600">Vos données sont prisionnières dans le CRM, et si vous souhaitez changer ?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-          <div class="mb-8 text-center">
-            <h3 class="mb-2 text-2xl font-bold">Pack pro</h3>
-            <div class="mb-2 text-4xl font-bold">690€</div>
-            <div class="text-zest-100">une fois, pas d'abonnement</div>
-          </div>
-
-          <ul class="mb-8 space-y-4">
-            <li class="flex items-center space-x-3">
-              <div class="flex h-5 w-5 items-center justify-center rounded-full bg-white/20">
-                <span class="text-xs font-bold text-white">✓</span>
-              </div>
-              <span>Setup complet pour vous</span>
-            </li>
-            <li class="flex items-center space-x-3">
-              <div class="flex h-5 w-5 items-center justify-center rounded-full bg-white/20">
-                <span class="text-xs font-bold text-white">✓</span>
-              </div>
-              <span>Import données existantes</span>
-            </li>
-            <li class="flex items-center space-x-3">
-              <div class="flex h-5 w-5 items-center justify-center rounded-full bg-white/20">
-                <span class="text-xs font-bold text-white">✓</span>
-              </div>
-              <span>Formation prise en main 2h</span>
-            </li>
-            <li class="flex items-center space-x-3">
-              <div class="flex h-5 w-5 items-center justify-center rounded-full bg-white/20">
-                <span class="text-xs font-bold text-white">✓</span>
-              </div>
-              <span>Support 6 mois</span>
-            </li>
-          </ul>
-
-          <button
-            onclick="bookMeeting()"
-            class="w-full rounded-lg bg-white py-3 font-semibold text-zest-500 transition-colors hover:bg-gray-100"
-          >
-            Faites-le pour moi
-          </button>
+                <!-- Solution -->
+                <div>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-8">
+                        Votre CRM<br>
+                        <span class="gradient-text">pour votre activité</span>
+                    </h2>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-green-600 font-bold">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Gratuit</h3>
+                                <p class="text-gray-600">Formation payante mais l'utisation du CRM est gratuite</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-green-600 font-bold">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Personnalisé à votre activité</h3>
+                                <p class="text-gray-600">Des templates adaptés à votre secteur d'activité</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <span class="text-green-600 font-bold">✓</span>
+                            </div>
+                            <div>
+                                <h3 class="font-semibold text-gray-900 mb-1">Evolutif selon vos besoins</h3>
+                                <p class="text-gray-600">Vous pouvez modifier votre CRM à tout moment</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <!-- Guarantee -->
-      <div class="mt-16 text-center">
-        <div class="inline-flex items-center space-x-2 rounded-full bg-green-50 px-6 py-3">
-          <span class="font-bold text-green-600">🛡️</span>
-          <span class="font-semibold text-green-800"
-            >Garantie "Opérationnel ou Remboursé" 30 jours</span
-          >
+    <!-- CRMBenefits -->
+    <section id="metiers" class="bg-white py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <CRMBenefits />
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
+    <!-- WhatAutomation -->
+    <section id="formules" class="bg-gray-50 py-20 lg:py-32">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-20">
+                <WhatAutomation />
+            </div>
+        </div>
+    </section>
 
-  <!-- FAQ -->
-  <FAQ />
+    <!-- Métiers -->
+    <section id="metiers" class="bg-white py-20 lg:py-32">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <MetiersCarousel />
+        </div>
+    </section>
 
-  <!-- CTA Final -->
-  <section class="bg-zest-500 py-20 lg:py-32">
-    <div class="mx-auto max-w-4xl px-4 text-center sm:px-6">
-      <h2 class="mb-8 text-4xl font-bold text-white lg:text-5xl">
-        Vous êtes prêt à créer votre CRM ?
-      </h2>
+    <!-- Formules -->
+    <section id="formules" class="bg-gray-50 py-20 lg:py-32">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Choisissez votre formule
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Apprenez à le créer ou on s'en charge pour vous
+                </p>
+            </div>
 
-      <p class="mb-12 text-xl text-zest-100">Economiser et gagner en productivité</p>
+            <div class="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- DIY -->
+                <div class="bg-white rounded-2xl p-8 border border-gray-200">
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">DIY Autonome</h3>
+                        <div class="text-4xl font-bold text-gray-900 mb-2">290€</div>
+                        <div class="text-gray-600">une fois, pas d'abonnement</div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center space-x-3">
+                            <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="text-green-600 text-xs font-bold">✓</span>
+                            </div>
+                            <span>Atelier formation 4h</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="text-green-600 text-xs font-bold">✓</span>
+                            </div>
+                            <span>Templates métier</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="text-green-600 text-xs font-bold">✓</span>
+                            </div>
+                            <span>Guide vidéo pas-à-pas</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center">
+                                <span class="text-green-600 text-xs font-bold">✓</span>
+                            </div>
+                            <span>Support 30 jours</span>
+                        </li>
+                    </ul>
+                    
+                    <button onclick="selectPlan('diy')" class="w-full bg-gray-100 text-gray-900 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors">
+                        Je veux apprendre
+                    </button>
+                </div>
 
-      <div class="flex flex-col justify-center gap-4 sm:flex-row">
-        <button
-          onclick="bookMeeting()"
-          class="rounded-lg bg-white px-8 py-4 text-lg font-semibold text-zest-500 transition-colors hover:bg-gray-100"
-        >
-          Réserver ma consultation gratuite
-        </button>
-        <a
-          href="/calculateur"
-          class="inline-block rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-white hover:text-zest-500"
-        >
-          Calculer mes économies
-        </a>
-      </div>
+                <!-- Done For You -->
+                <div class="bg-zest-500 rounded-2xl p-8 text-white relative">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-white text-zest-500 px-4 py-1 rounded-full text-sm font-semibold">
+                            Populaire
+                        </span>
+                    </div>
+                    
+                    <div class="text-center mb-8">
+                        <h3 class="text-2xl font-bold mb-2">Done For You</h3>
+                        <div class="text-4xl font-bold mb-2">690€</div>
+                        <div class="text-zest-100">une fois, pas d'abonnement</div>
+                    </div>
+                    
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center space-x-3">
+                            <div class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">
+                                <span class="text-white text-xs font-bold">✓</span>
+                            </div>
+                            <span>Setup complet pour vous</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">
+                                <span class="text-white text-xs font-bold">✓</span>
+                            </div>
+                            <span>Import données existantes</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">
+                                <span class="text-white text-xs font-bold">✓</span>
+                            </div>
+                            <span>Formation prise en main 2h</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <div class="w-5 h-5 bg-white/20 rounded-full flex items-center justify-center">
+                                <span class="text-white text-xs font-bold">✓</span>
+                            </div>
+                            <span>Support 6 mois</span>
+                        </li>
+                    </ul>
+                    
+                    <button onclick="selectPlan('done')" class="w-full bg-white text-zest-500 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Faites-le pour moi
+                    </button>
+                </div>
+            </div>
 
-      <p class="mt-8 text-sm text-zest-100">
-        ✓ Sans engagement • ✓ Consultation 30 min • ✓ Economie
-      </p>
-    </div>
-  </section>
-</Layout>
+            <!-- Guarantee -->
+            <div class="text-center mt-16">
+                <div class="inline-flex items-center space-x-2 bg-green-50 px-6 py-3 rounded-full">
+                    <span class="text-green-600 font-bold">🛡️</span>
+                    <span class="text-green-800 font-semibold">Garantie "Opérationnel ou Remboursé" 30 jours</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<script>
-  function bookMeeting() {
-    // Redirection vers Calendly ou autre système de rendez-vous
-    window.location.href = 'https://calendly.com/votre-lien';
-  }
-</script>
+    <!-- Social Proof -->
+    <section class="bg-white py-20 lg:py-32">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Les clients vous donnent leurs retours
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">
+                            J
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-900">Jean Dubois</h4>
+                            <p class="text-gray-600 text-sm">Plombier, Lyon</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        "En 6 mois, j'ai récupéré 15% de CA en plus grâce au suivi automatique. Plus jamais d'oubli de relance !"
+                    </p>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-pink-500 rounded-full flex items-center justify-center text-white font-bold">
+                            M
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-900">Marie Lefort</h4>
+                            <p class="text-gray-600 text-sm">Agent immobilier, Paris</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        "4800€ d'économies vs mon ancien CRM ! Et en plus c'est parfaitement adapté à l'immobilier."
+                    </p>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-50 rounded-2xl p-8">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">
+                            P
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold text-gray-900">Pierre Martin</h4>
+                            <p class="text-gray-600 text-sm">Consultant IT, Toulouse</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        "Formation excellente ! En 4h j'ai créé un CRM plus puissant que mon ancien Salesforce."
+                    </p>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-gray-900">300+</div>
+                    <div class="text-gray-600">Entreprises formées</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-gray-900">4.9/5</div>
+                    <div class="text-gray-600">Note moyenne</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-gray-900">98%</div>
+                    <div class="text-gray-600">Taux de satisfaction</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-gray-900">1.2M€</div>
+                    <div class="text-gray-600">Économisés par nos clients</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <FAQ />
+
+    <!-- CTA Final -->
+    <section class="bg-zest-500 py-20 lg:py-32">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+            <h2 class="text-4xl lg:text-5xl font-bold text-white mb-8">
+                Prêt à créer votre CRM gratuit ?
+            </h2>
+            
+            <p class="text-xl text-zest-100 mb-12">
+                Rejoignez les 300+ entreprises qui ont dit stop aux abonnements
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="bookMeeting()" class="bg-white text-zest-500 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
+                    Réserver ma consultation gratuite
+                </button>
+                <a href="/calculateur" class="border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-zest-500 transition-colors inline-block">
+                    Calculer mes économies
+                </a>
+            </div>
+            
+            <p class="text-zest-100 mt-8 text-sm">
+                ✓ Sans engagement • ✓ Consultation 30 min • ✓ Garantie satisfait ou remboursé
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="w-8 h-8 bg-zest-500 rounded-lg flex items-center justify-center">
+                            <span class="text-white font-bold text-sm">Z</span>
+                        </div>
+                        <span class="text-xl font-bold">ZestCRM</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Du zest dans votre business
+                    </p>
+                </div>
+
+                <!-- Solutions -->
+                <div>
+                    <h4 class="font-semibold mb-4">Solutions</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">CRM Artisans</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">CRM Immobilier</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">CRM Consultants</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="font-semibold mb-4">Support</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Tutoriels</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h4 class="font-semibold mb-4">Légal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white transition-colors">Mentions légales</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Confidentialité</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">CGV</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2024 ZestCRM. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Google Calendar booking
+        function bookMeeting() {
+            // Ouvre le lien de réservation Google Calendar dans un nouvel onglet
+            // avec des paramètres de sécurité supplémentaires
+            window.open('https://calendar.app.google/GAuyVQfSgfuaZ6wL7', '_blank', 'noopener,noreferrer');
+        }
+
+        // Plan selection
+        function selectPlan(plan) {
+            const planDetails = {
+                'diy': {
+                    name: 'DIY Autonome',
+                    price: '290€',
+                    description: 'Formation 4h + templates + support 30j'
+                },
+                'done': {
+                    name: 'Done For You', 
+                    price: '690€',
+                    description: 'Setup complet + formation + support 6 mois'
+                }
+            };
+            
+            const selected = planDetails[plan];
+            
+            if (confirm(`🎯 Excellent choix !\n\n${selected.name} - ${selected.price}\n${selected.description}\n\nRéserver une consultation gratuite pour valider vos besoins ?`)) {
+                bookMeeting();
+            }
+        }
+
+        // Calculator modal/page
+        function showCalculator() {
+            // Rediriger vers la page calculateur
+            window.location.href = '/calculateur';
+        }
+
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Simple scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply animations on load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add initial styles for animations
+            const animatedElements = document.querySelectorAll('section > div');
+            animatedElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'all 0.6s ease-out';
+                observer.observe(el);
+            });
+
+            // Show first section immediately
+            const firstSection = document.querySelector('section div');
+            if (firstSection) {
+                firstSection.style.opacity = '1';
+                firstSection.style.transform = 'translateY(0)';
+            }
+        });
+
+        // Mobile menu toggle (if you want to add mobile menu later)
+        function toggleMobileMenu() {
+            // Implementation for mobile menu
+            console.log('Mobile menu toggle');
+        }
+
+        // Track interactions for analytics (add your tracking code)
+        function trackEvent(eventName, properties = {}) {
+            // Google Analytics 4 example:
+            // gtag('event', eventName, properties);
+            
+            // Or other analytics services
+            console.log('Event tracked:', eventName, properties);
+        }
+
+        // Track CTA clicks
+        document.addEventListener('click', (e) => {
+            if (e.target.textContent.includes('RDV') || e.target.textContent.includes('consultation')) {
+                trackEvent('cta_consultation_clicked', {
+                    button_text: e.target.textContent,
+                    page_section: e.target.closest('section')?.id || 'unknown'
+                });
+            }
+            
+            if (e.target.textContent.includes('économies')) {
+                trackEvent('calculator_opened', {
+                    button_text: e.target.textContent
+                });
+            }
+        });
+    </script>
+</body>
+</html>
