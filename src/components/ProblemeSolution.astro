@@ -1,105 +1,558 @@
 ---
 // src/components/ProblemeSolution.astro
 ---
-<section class="bg-gray-50 py-20 lg:py-32">
-  <div class="mx-auto max-w-5xl px-4 sm:px-6">
-    <div class="grid items-center gap-16 lg:grid-cols-2">
 
-    <!-- Problem -->
-      <div>
-        <h2 class="text-cryan-900 mb-8 text-4xl font-bold">
-          Les CRM qu'on utilise à<br />
-          <span class="text-red-600">50% de leur capacité</span>
-        </h2>
+<section
+  class="problem-solution-section relative overflow-hidden bg-gradient-to-b from-white to-white py-20 lg:py-32"
+>
+  <!-- Éléments décoratifs -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="floating-element element-1"></div>
+    <div class="floating-element element-2"></div>
+    <div class="floating-element element-3"></div>
+  </div>
 
-        <div class="space-y-6">
-          <div class="flex items-start space-x-4">
+  <div class="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
+    <!-- Titre principal centré -->
+    <div class="mb-16 text-center">
+      <div class="mb-6 inline-flex items-center space-x-2 rounded-full bg-orange-100 px-4 py-2">
+        <span class="h-2 w-2 animate-pulse rounded-full bg-orange-500"></span>
+        <span class="text-sm font-medium text-orange-800"
+          >Le vrai problème des CRM traditionnels</span
+        >
+      </div>
+      <h2 class="mb-4 text-4xl font-bold text-gray-900 lg:text-5xl">
+        <span class="text-orange-600">Pourquoi payer cher</span><br />
+        pour utiliser 30% des fonctionnalités ?
+      </h2>
+      <p class="mx-auto max-w-3xl text-xl text-gray-600">
+        La plupart des entreprises investissent dans des CRM surdimensionnés qui ne correspondent
+        pas à leurs besoins réels.
+      </p>
+    </div>
+
+    <div class="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
+      <!-- Problem Section -->
+      <div
+        class="problem-card relative rounded-2xl border border-orange-100 bg-white p-8 shadow-xl lg:p-10"
+      >
+        <!-- Badge problème -->
+        <div class="absolute -top-4 left-8">
+          <div
+            class="flex items-center gap-2 rounded-full bg-orange-500 px-4 py-2 text-sm font-semibold text-white"
+          >
+            <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                fill-rule="evenodd"
+                d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                clip-rule="evenodd"></path>
+            </svg>
+            Problèmes actuels
+          </div>
+        </div>
+
+        <div class="pt-6">
+          <h3 class="mb-8 text-2xl font-bold text-gray-900 lg:text-3xl">
+            Les CRM traditionnels<br />
+            <span class="relative text-orange-600">
+              vous coûtent cher
+              <svg
+                class="absolute -bottom-2 left-0 h-3 w-full text-orange-200"
+                viewBox="0 0 200 12"
+                fill="currentColor"
+              >
+                <path
+                  d="M2 6c20-3 40-3 60 0s40 3 60 0s40-3 60 0"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  fill="none"></path>
+              </svg>
+            </span>
+          </h3>
+
+          <div class="space-y-6">
             <div
-              class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-red-100"
+              class="problem-item flex items-start space-x-4 rounded-xl border border-orange-100 bg-orange-50 p-4"
             >
-              <span class="font-bold text-red-600">×</span>
+              <div
+                class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-orange-500"
+              >
+                <svg
+                  class="h-5 w-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h4 class="mb-2 text-lg font-semibold text-orange-900">80€/mois minimum</h4>
+                <p class="text-sm leading-relaxed text-orange-700">
+                  <strong>4 800€ sur 5 ans</strong> pour des fonctions complexes que vous n'utilisez
+                  jamais. Sans compter les frais de formation de l'équipe.
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 class="text-cryan-900 mb-1 font-semibold">80€/mois minimum</h3>
-              <p class="text-gray-600">
-                4800€ sur 5 ans pour des fonctions que vous n'utilisez pas
-              </p>
+
+            <div
+              class="problem-item flex items-start space-x-4 rounded-xl border border-orange-100 bg-orange-50 p-4"
+            >
+              <div
+                class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-orange-500"
+              >
+                <svg
+                  class="h-5 w-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h4 class="mb-2 text-lg font-semibold text-orange-900">Solution générique</h4>
+                <p class="text-sm leading-relaxed text-orange-700">
+                  Conçu pour plaire à tous mais adapté à personne.
+                  <strong>Impossible de personnaliser</strong> selon votre métier spécifique.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="problem-item flex items-start space-x-4 rounded-xl border border-orange-100 bg-orange-50 p-4"
+            >
+              <div
+                class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-orange-500"
+              >
+                <svg
+                  class="h-5 w-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h4 class="mb-2 text-lg font-semibold text-orange-900">Données prisonnières</h4>
+                <p class="text-sm leading-relaxed text-orange-700">
+                  Vos précieuses données client sont bloquées.
+                  <strong>Changer de solution = mission impossible</strong> sans perdre votre historique.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div class="flex items-start space-x-4">
-            <div
-              class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-red-100"
-            >
-              <span class="font-bold text-red-600">×</span>
-            </div>
-            <div>
-              <h3 class="text-cryan-900 mb-1 font-semibold">CRM générique</h3>
-              <p class="text-gray-600">Aucune évolution possible</p>
-            </div>
-          </div>
-
-          <div class="flex items-start space-x-4">
-            <div
-              class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-red-100"
-            >
-              <span class="font-bold text-red-600">×</span>
-            </div>
-            <div>
-              <h3 class="text-cryan-900 mb-1 font-semibold">Données prisonnières</h3>
-              <p class="text-gray-600">
-                Vos données sont prisionnières dans le CRM, et si vous souhaitez changer ?
-              </p>
-            </div>
+          <!-- Coût calculé -->
+          <div class="mt-8 rounded-xl bg-orange-100 p-6 text-center">
+            <div class="mb-2 text-3xl font-bold text-orange-900">4 800€</div>
+            <div class="text-sm text-orange-700">coût total sur 5 ans pour un CRM basique</div>
           </div>
         </div>
       </div>
 
-      <!-- Solution -->
-      <div>
-        <h2 class="text-cryan-900 mb-8 text-4xl font-bold">
-          Votre CRM<br />
-          <span class="gradient-text">pour votre activité</span>
-        </h2>
+      <!-- Solution Section -->
+      <div
+        class="solution-card relative rounded-2xl border border-green-200 bg-gradient-to-br from-green-50 to-emerald-50 p-8 shadow-xl lg:p-10"
+      >
+        <!-- Badge solution -->
+        <div class="absolute -top-4 left-8">
+          <div
+            class="flex items-center gap-2 rounded-full bg-green-500 px-4 py-2 text-sm font-semibold text-white"
+          >
+            <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                clip-rule="evenodd"></path>
+            </svg>
+            Notre solution
+          </div>
+        </div>
 
-        <div class="space-y-6">
-          <div class="flex items-start space-x-4">
+        <div class="pt-6">
+          <h3 class="mb-8 text-2xl font-bold text-gray-900 lg:text-3xl">
+            Votre CRM sur-mesure<br />
+            <span class="gradient-text relative">
+              avec Airtable
+              <svg
+                class="absolute -bottom-2 left-0 h-3 w-full text-orange-200"
+                viewBox="0 0 200 12"
+                fill="currentColor"
+              >
+                <path
+                  d="M2 6c20-3 40-3 60 0s40 3 60 0s40-3 60 0"
+                  stroke="currentColor"
+                  stroke-width="3"
+                  fill="none"></path>
+              </svg>
+            </span>
+          </h3>
+
+          <div class="space-y-6">
             <div
-              class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100"
+              class="solution-item flex items-start space-x-4 rounded-xl border border-green-200 bg-green-100 p-4"
             >
-              <span class="font-bold text-green-600">✓</span>
+              <div
+                class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-500"
+              >
+                <svg
+                  class="h-5 w-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h4 class="mb-2 text-lg font-semibold text-green-900">100% gratuit à l'usage</h4>
+                <p class="text-sm leading-relaxed text-green-700">
+                  <strong>Formation payante une seule fois</strong>, puis utilisation gratuite à
+                  vie. Plus jamais d'abonnements mensuels qui s'accumulent.
+                </p>
+              </div>
             </div>
-            <div>
-              <h3 class="text-cryan-900 mb-1 font-semibold">Gratuit</h3>
-              <p class="text-gray-600">Formation payante mais l'utisation du CRM est gratuite</p>
+
+            <div
+              class="solution-item flex items-start space-x-4 rounded-xl border border-green-200 bg-green-100 p-4"
+            >
+              <div
+                class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-500"
+              >
+                <svg
+                  class="h-5 w-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h4 class="mb-2 text-lg font-semibold text-green-900">Adapté à votre métier</h4>
+                <p class="text-sm leading-relaxed text-green-700">
+                  Templates spécialisés : <strong>artisan, consultant, immobilier...</strong>
+                  Chaque champ correspond à vos besoins réels.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="solution-item flex items-start space-x-4 rounded-xl border border-green-200 bg-green-100 p-4"
+            >
+              <div
+                class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-500"
+              >
+                <svg
+                  class="h-5 w-5 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                  ></path>
+                </svg>
+              </div>
+              <div class="flex-1">
+                <h4 class="mb-2 text-lg font-semibold text-green-900">Évolutif à l'infini</h4>
+                <p class="text-sm leading-relaxed text-green-700">
+                  <strong>Vous contrôlez tout.</strong> Ajoutez des champs, créez des automatisations,
+                  intégrez de nouveaux outils selon votre croissance.
+                </p>
+              </div>
             </div>
           </div>
 
-          <div class="flex items-start space-x-4">
-            <div
-              class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100"
-            >
-              <span class="font-bold text-green-600">✓</span>
-            </div>
-            <div>
-              <h3 class="text-cryan-900 mb-1 font-semibold">Personnalisé à votre activité</h3>
-              <p class="text-gray-600">Des templates adaptés à votre secteur d'activité</p>
-            </div>
+          <!-- Économies réalisées -->
+          <div class="mt-8 rounded-xl border-2 border-green-300 bg-white p-6 text-center">
+            <div class="mb-2 text-3xl font-bold text-green-600">0€/mois</div>
+            <div class="text-sm text-green-700">après la formation</div>
+            <div class="mt-2 text-xs font-medium text-green-600">= 4 800€ économisés sur 5 ans</div>
           </div>
+        </div>
+      </div>
+    </div>
 
-          <div class="flex items-start space-x-4">
-            <div
-              class="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg bg-green-100"
-            >
-              <span class="font-bold text-green-600">✓</span>
-            </div>
-            <div>
-              <h3 class="text-cryan-900 mb-1 font-semibold">Evolutif selon vos besoins</h3>
-              <p class="text-gray-600">Vous pouvez modifier votre CRM à tout moment</p>
-            </div>
+    <!-- Section comparaison -->
+    <div class="mt-20">
+      <div class="rounded-2xl bg-white p-8 shadow-xl lg:p-12">
+        <h3 class="mb-12 text-center text-2xl font-bold text-gray-900 lg:text-3xl">
+          Comparaison sur 5 ans
+        </h3>
+
+        <div class="overflow-x-auto">
+          <table class="comparison-table w-full">
+            <thead>
+              <tr class="border-b-2 border-gray-200">
+                <th class="px-6 py-4 text-left font-semibold text-gray-900"></th>
+                <th class="rounded-t-lg bg-orange-50 px-6 py-4 text-center font-semibold text-orange-600"
+                  >CRM traditionnel</th
+                >
+                <th
+                  class="rounded-t-lg bg-green-50 px-6 py-4 text-center font-semibold text-green-600"
+                  >Notre solution</th
+                >
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+              <tr>
+                <td class="px-6 py-4 font-medium text-gray-900">Coût total 5 ans</td>
+                <td class="bg-orange-50 px-6 py-4 text-center font-bold text-orange-600">4 800€</td>
+                <td class="bg-green-50 px-6 py-4 text-center font-bold text-green-600">297€</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 font-medium text-gray-900">Personnalisation</td>
+                <td class="bg-orange-50 px-6 py-4 text-center text-orange-600">❌ Limitée</td>
+                <td class="bg-green-50 px-6 py-4 text-center text-green-600">✅ Totale</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 font-medium text-gray-900">Propriété des données</td>
+                <td class="bg-orange-50 px-6 py-4 text-center text-orange-600">❌ Verrouillée</td>
+                <td class="bg-green-50 px-6 py-4 text-center text-green-600">✅ Vous</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 font-medium text-gray-900">Formation équipe</td>
+                <td class="bg-orange-50 px-6 py-4 text-center text-orange-600">❌ Complexe</td>
+                <td class="bg-green-50 px-6 py-4 text-center text-green-600">✅ Simple</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mt-8 text-center">
+          <div class="inline-flex items-center space-x-4 rounded-full bg-green-100 px-6 py-3">
+            <span class="font-semibold text-green-800">Économies réalisées :</span>
+            <span class="text-xl font-bold text-green-600">4 503€</span>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .gradient-text {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Animations des éléments flottants */
+  .floating-element {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #f97316, #ea580c);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .element-1 {
+    width: 60px;
+    height: 60px;
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+  }
+
+  .element-2 {
+    width: 80px;
+    height: 80px;
+    top: 60%;
+    right: 10%;
+    animation-delay: 2s;
+  }
+
+  .element-3 {
+    width: 40px;
+    height: 40px;
+    bottom: 20%;
+    left: 15%;
+    animation-delay: 4s;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+    }
+    50% {
+      transform: translateY(-15px) scale(1.1);
+    }
+  }
+
+  /* Animations des cartes */
+  .problem-card,
+  .solution-card {
+    animation: slideInUp 0.6s ease-out;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .problem-card:hover,
+  .solution-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .problem-item,
+  .solution-item {
+    animation: fadeInLeft 0.6s ease-out;
+    animation-fill-mode: both;
+    transition: transform 0.2s ease;
+  }
+
+  .problem-item:hover,
+  .solution-item:hover {
+    transform: translateX(5px);
+  }
+
+  .problem-item:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .problem-item:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .problem-item:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  .solution-item:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .solution-item:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .solution-item:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Tableau de comparaison */
+  .comparison-table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    border: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .problem-card,
+    .solution-card {
+      padding: 1.5rem;
+    }
+
+    .problem-item,
+    .solution-item {
+      padding: 1rem;
+    }
+
+    .floating-element {
+      display: none;
+    }
+
+    .comparison-table {
+      font-size: 0.875rem;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 0.75rem 0.5rem;
+    }
+  }
+
+  /* Animation au scroll */
+  @media (prefers-reduced-motion: no-preference) {
+    .problem-card,
+    .solution-card {
+      opacity: 0;
+      animation: slideInUp 0.8s ease-out forwards;
+    }
+
+    .solution-card {
+      animation-delay: 0.2s;
+    }
+  }
+</style>
+
+<script>
+  // Animation au scroll
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px',
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        entry.target.style.opacity = '1';
+      }
+    });
+  }, observerOptions);
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll(
+      '.problem-card, .solution-card, .problem-item, .solution-item'
+    );
+    animatedElements.forEach((el) => {
+      observer.observe(el);
+    });
+  });
+</script>

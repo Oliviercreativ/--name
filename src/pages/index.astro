@@ -1,6 +1,7 @@
 ---
 // src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
+import HeroHP from '../components/HeroHP.astro';
 import CRMBenefits from '../components/CRMBenefits.astro';
 import MetiersCarousel from '../components/MetiersCarousel.astro';
 import FAQ from '../components/FAQ.astro';
@@ -17,101 +18,210 @@ import Newsletter from '../components/Newsletter.astro';
   description="Pourquoi payer 80€/mois quand vous pouvez créer votre CRM gratuit ? Formation ou service clé en main pour artisans, agents immobiliers, consultants."
 >
   <!-- Hero Section -->
-  <section class="hero-pattern bg-white">
-    <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:py-32">
-      <div class="text-center">
-        <h1 class="text-cryan-900 mb-8 text-5xl font-black leading-tight lg:text-7xl">
-          Economisez et créez votre CRM
-          <span class="gradient-text">avec Airtable</span>
-        </h1>
 
-        <p class="mx-auto mb-12 max-w-4xl text-xl leading-relaxed text-gray-600 lg:text-2xl">
-          J'accompagne les enteprises et les entrepreneurs a créer leur CRM selon leurs besoins pour
-          gagner du temps et optimiser leurs productivités. <br />
-        </p>
+  <HeroHP />
+  <BeforeAfter />
+  <ProblemeSolution />
 
-        <!-- Stats -->
-        <div class="mb-16 flex items-center justify-center space-x-12">
-          <div class="text-center">
-            <div class="text-cryan-900 text-3xl font-bold">100+</div>
-            <div class="text-sm text-gray-600">Entreprises formées</div>
-          </div>
-          <div class="text-center">
-            <div class="text-cryan-900 text-3xl font-bold">600€</div>
-            <div class="text-sm text-gray-600">Économies moyennes par ans</div>
-          </div>
-          <div class="text-center">
-            <div class="text-cryan-900 text-3xl font-bold">4h</div>
-            <div class="text-sm text-gray-600">Pour le créer</div>
-          </div>
-        </div>
-
-        <!-- CTA -->
-        <div class="flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <button
-            onclick="bookMeeting()"
-            class="transform rounded-lg bg-zest-500 px-8 py-4 text-lg font-semibold text-white transition-all hover:scale-105 hover:bg-zest-600"
-          >
-            Voir comment ça marche
-          </button>
-          <a
-            href="/calculateur"
-            class="inline-block rounded-lg px-8 py-4 text-lg font-semibold text-zest-600 transition-colors hover:bg-zest-50"
-          >
-            Calculer mes économies →
-          </a>
-        </div>
-      </div>
+  <!-- CRMBenefits avec background amélioré -->
+  <section id="metiers" class="bg-gradient-to-b from-white to-orange-50 py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6">
+      <CRMBenefits />
     </div>
   </section>
 
-  <BeforeAfter />
-  <ProblemeSolution />
+  <Formule />
   
-  <!-- CRMBenefits -->
-    <section id="metiers" class="bg-white py-20">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6">
-        <CRMBenefits />
-      </div>
-    </section>
+  <CasClient />
+  <!-- FAQ -->
+  <section class="bg-white py-20 lg:py-32">
+    <div class="mx-auto max-w-6xl px-4 sm:px-6">
+      <FAQ />
+    </div>
+  </section>
 
-    <CasClient />
-
-    <Formule />
-
-    <!-- Métiers -->
-    <section id="metiers" class="bg-white py-20 lg:py-32">
-      <div class="mx-auto max-w-7xl px-4 sm:px-6">
-        <MetiersCarousel />
-        <CtaFullPage />
-      </div>
-    </section>
-
-    <Formule />
-
-    <!-- FAQ -->
-    <section class="bg-white py-20 lg:py-32">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6">
-        <FAQ />
-      </div>
-    </section>
-    <CtaFullPage />
-    <Newsletter />
-  </BeforeAfter>
+  <CtaFullPage />
 
   <style>
+    /* Gradient text amélioré */
     .gradient-text {
-      background: linear-gradient(135deg, #f97316, #ea580c);
+      background: linear-gradient(135deg, #f97316, #ea580c, #dc2626);
+      background-size: 200% 200%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      animation: gradientShift 3s ease-in-out infinite;
     }
 
-    .hero-pattern {
+    @keyframes gradientShift {
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+    }
+
+    /* Formes flottantes animées */
+    .floating-shapes {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.1;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .shape-1 {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(45deg, #f97316, #ea580c);
+      top: 20%;
+      left: 10%;
+      animation-delay: 0s;
+    }
+
+    .shape-2 {
+      width: 120px;
+      height: 120px;
+      background: linear-gradient(45deg, #3b82f6, #1d4ed8);
+      top: 60%;
+      right: 20%;
+      animation-delay: 2s;
+    }
+
+    .shape-3 {
+      width: 60px;
+      height: 60px;
+      background: linear-gradient(45deg, #10b981, #059669);
+      bottom: 30%;
+      left: 20%;
+      animation-delay: 4s;
+    }
+
+    .shape-4 {
+      width: 100px;
+      height: 100px;
+      background: linear-gradient(45deg, #8b5cf6, #7c3aed);
+      top: 10%;
+      right: 30%;
+      animation-delay: 1s;
+    }
+
+    @keyframes float {
+      0%,
+      100% {
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        transform: translateY(-20px) scale(1.1);
+      }
+    }
+
+    /* Animations d'entrée */
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    .fade-in-right {
+      animation: fadeInRight 0.8s ease-out 0.3s both;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    /* Animation des stats */
+    .stat-item {
+      animation: bounceIn 0.6s ease-out;
+      animation-fill-mode: both;
+    }
+
+    .stat-item:nth-child(1) {
+      animation-delay: 0.2s;
+    }
+    .stat-item:nth-child(2) {
+      animation-delay: 0.4s;
+    }
+    .stat-item:nth-child(3) {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes bounceIn {
+      0% {
+        opacity: 0;
+        transform: scale(0.3);
+      }
+      50% {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+      70% {
+        transform: scale(0.9);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Responsive amélioré */
+    @media (max-width: 768px) {
+      .hero-section {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+      }
+
+      .fade-in-right {
+        animation: fadeInUp 0.8s ease-out 0.3s both;
+      }
+    }
+
+    /* Amélioration des hover effects */
+    .stat-item:hover {
+      transform: translateY(-2px);
+      transition: transform 0.2s ease;
+    }
+
+    /* Pattern de fond subtil */
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
       background-image:
-        radial-gradient(circle at 25px 25px, rgba(249, 115, 22, 0.1) 2%, transparent 0%),
-        radial-gradient(circle at 75px 75px, rgba(234, 88, 12, 0.1) 2%, transparent 0%);
+        radial-gradient(circle at 25px 25px, rgba(249, 115, 22, 0.05) 2%, transparent 0%),
+        radial-gradient(circle at 75px 75px, rgba(234, 88, 12, 0.05) 2%, transparent 0%);
       background-size: 100px 100px;
+      pointer-events: none;
     }
   </style>
 
@@ -119,5 +229,25 @@ import Newsletter from '../components/Newsletter.astro';
     function bookMeeting() {
       window.location.href = 'https://calendly.com/olivierdemontant/30min';
     }
+
+    // Animation au scroll pour les éléments
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px',
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+        }
+      });
+    }, observerOptions);
+
+    // Observer les éléments animés
+    document.addEventListener('DOMContentLoaded', () => {
+      const animatedElements = document.querySelectorAll('.fade-in-up, .fade-in-right, .stat-item');
+      animatedElements.forEach((el) => observer.observe(el));
+    });
   </script>
 </Layout>

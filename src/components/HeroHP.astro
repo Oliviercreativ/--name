@@ -1,0 +1,193 @@
+<section
+    class="hero-section relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-orange-50"
+>
+    <!-- Éléments décoratifs animés -->
+    <div class="absolute inset-0 overflow-hidden">
+    <div class="floating-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+    </div>
+    </div>
+
+    <div class="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:py-32">
+    <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <!-- Contenu principal -->
+        <div class="fade-in-up space-y-8">
+        <!-- Badge d'accroche -->
+        <div
+            class="inline-flex items-center space-x-2 rounded-full border border-orange-200 bg-white/80 px-4 py-2 backdrop-blur-sm"
+        >
+            <span class="h-2 w-2 animate-pulse rounded-full bg-green-500"></span>
+            <span class="text-sm font-medium text-gray-700"
+            >+100 entreprises nous font confiance</span
+            >
+        </div>
+
+        <h1
+            class="text-5xl font-black leading-[1.1] tracking-tight text-gray-900 md:text-6xl lg:text-7xl"
+        >
+            Économisez et créez votre CRM
+            <span class="gradient-text mt-2 block">avec Airtable</span>
+        </h1>
+
+        <p class="max-w-2xl text-xl leading-relaxed text-gray-600 lg:text-2xl">
+            J'accompagne les entreprises et les entrepreneurs à créer leur
+            <span class="font-semibold text-gray-800">CRM personnalisé</span>
+            pour gagner du temps et optimiser leur productivité.
+        </p>
+
+        <!-- Stats rapides -->
+        <div class="grid grid-cols-3 gap-6 py-6">
+            <div class="stat-item text-center">
+            <div class="mb-1 text-3xl font-bold text-orange-600 lg:text-4xl">100+</div>
+            <div class="text-sm text-gray-600">Entreprises formées</div>
+            </div>
+            <div class="stat-item text-center">
+            <div class="mb-1 text-3xl font-bold text-orange-600 lg:text-4xl">600€</div>
+            <div class="text-sm text-gray-600">Économies par an</div>
+            </div>
+            <div class="stat-item text-center">
+            <div class="mb-1 text-3xl font-bold text-orange-600 lg:text-4xl">4h</div>
+            <div class="text-sm text-gray-600">Pour le créer</div>
+            </div>
+        </div>
+
+        <!-- CTA améliorés -->
+        <div class="flex flex-col gap-4 pt-4 sm:flex-row">
+            <button
+            onclick="bookMeeting()"
+            class="group relative overflow-hidden rounded-xl bg-gradient-to-r from-orange-500 to-orange-600 px-8 py-4 text-lg font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/25"
+            >
+            <span class="relative z-10 flex items-center justify-center gap-2">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+                ></path>
+                </svg>
+                Voir comment ça marche
+            </span>
+            <div
+                class="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-700 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+            >
+            </div>
+            </button>
+        </div>
+        </div>
+
+        <!-- Visuel côté droit -->
+        <div class="fade-in-right relative">
+        <!-- Card mockup principale -->
+        <div
+            class="relative z-10 rotate-2 transform rounded-2xl bg-white p-8 shadow-2xl transition-transform duration-500 hover:rotate-0"
+        >
+            <div class="space-y-6">
+            <!-- Header mockup -->
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                <div
+                    class="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-orange-400 to-orange-600"
+                >
+                    <svg class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <div class="font-semibold text-gray-900">Mon CRM Artisan</div>
+                    <div class="text-sm text-gray-500">Créé avec Airtable</div>
+                </div>
+                </div>
+                <div class="flex gap-1">
+                <div class="h-3 w-3 rounded-full bg-red-400"></div>
+                <div class="h-3 w-3 rounded-full bg-yellow-400"></div>
+                <div class="h-3 w-3 rounded-full bg-green-400"></div>
+                </div>
+            </div>
+
+            <!-- Dashboard mockup -->
+            <div class="space-y-4">
+                <div class="grid grid-cols-3 gap-3">
+                <div class="rounded-lg bg-blue-50 p-3 text-center">
+                    <div class="text-lg font-bold text-blue-600">12</div>
+                    <div class="text-xs text-gray-600">Prospects</div>
+                </div>
+                <div class="rounded-lg bg-green-50 p-3 text-center">
+                    <div class="text-lg font-bold text-green-600">8</div>
+                    <div class="text-xs text-gray-600">En cours</div>
+                </div>
+                <div class="rounded-lg bg-orange-50 p-3 text-center">
+                    <div class="text-lg font-bold text-orange-600">€4.2k</div>
+                    <div class="text-xs text-gray-600">CA mois</div>
+                </div>
+                </div>
+
+                <!-- Liste mockup -->
+                <div class="space-y-2">
+                <div class="flex items-center justify-between rounded-lg bg-gray-50 p-3">
+                    <div class="flex items-center gap-3">
+                    <div class="h-8 w-8 rounded-full bg-blue-500"></div>
+                    <div>
+                        <div class="text-sm font-medium">M. Dubois - Salle de bain</div>
+                        <div class="text-xs text-gray-500">Devis envoyé</div>
+                    </div>
+                    </div>
+                    <div class="text-sm font-medium text-green-600">€1,200</div>
+                </div>
+
+                <div class="flex items-center justify-between rounded-lg bg-gray-50 p-3">
+                    <div class="flex items-center gap-3">
+                    <div class="h-8 w-8 rounded-full bg-orange-500"></div>
+                    <div>
+                        <div class="text-sm font-medium">Mme Martin - Cuisine</div>
+                        <div class="text-xs text-gray-500">Planifié demain</div>
+                    </div>
+                    </div>
+                    <div class="text-sm font-medium text-orange-600">€2,800</div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- Card secondaire -->
+        <div
+            class="absolute -right-4 -top-4 z-0 -rotate-12 transform rounded-xl bg-gradient-to-br from-orange-400 to-orange-600 p-4 text-white shadow-xl"
+        >
+            <div class="text-center">
+            <div class="text-2xl font-bold">600€</div>
+            <div class="text-sm opacity-90">économisés/mois</div>
+            </div>
+        </div>
+
+        <!-- Éléments décoratifs -->
+        <div
+            class="absolute -bottom-6 -left-6 h-24 w-24 rounded-full bg-blue-100 opacity-60 blur-xl"
+        >
+        </div>
+        <div
+            class="absolute -top-8 left-8 h-16 w-16 rounded-full bg-green-100 opacity-60 blur-xl"
+        >
+        </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Vague de transition -->
+    <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
+    <svg
+        class="relative block h-16 w-full"
+        data-name="Layer 1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200 120"
+        preserveAspectRatio="none"
+    >
+        <path
+        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+        class="fill-white"></path>
+    </svg>
+    </div>
+</section>

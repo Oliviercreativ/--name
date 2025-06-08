@@ -1,61 +1,703 @@
 ---
 // src/components/BeforeAfter.astro
 ---
-<section class="py-20 bg-white">
-  <div class="max-w-4xl mx-auto px-4 sm:px-6">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl font-bold mb-6">
-        Transformez votre <span class="gradient-text">productivité</span>
+
+<section
+  class="before-after-section relative bg-gradient-to-b from-white to-gray-50 py-20 lg:py-32"
+>
+  <!-- Éléments décoratifs -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="transform-element element-1"></div>
+    <div class="transform-element element-2"></div>
+    <div class="transform-element element-3"></div>
+  </div>
+
+  <div class="relative z-10 mx-auto max-w-6xl px-4 sm:px-6">
+    <!-- Header amélioré -->
+    <div class="mb-16 text-center">
+      <div class="mb-6 inline-flex items-center space-x-2 rounded-full bg-orange-100 px-4 py-2">
+        <svg class="h-4 w-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+          <path
+            fill-rule="evenodd"
+            d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+            clip-rule="evenodd"></path>
+        </svg>
+        <span class="text-sm font-medium text-orange-800">Transformation garantie</span>
+      </div>
+
+      <h2 class="mb-6 text-4xl font-bold leading-tight lg:text-5xl">
+        Transformez votre <span class="gradient-text">productivité</span><br />
+        <span class="text-3xl font-normal text-gray-600 lg:text-4xl">en quelques heures</span>
       </h2>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-        Un CRM (Customer Relationship Management) est un outil qui centralise et automatise la gestion de vos relations clients. 
-        Il vous permet de suivre toutes vos interactions, de gérer vos contacts et d'optimiser votre processus commercial.
+
+      <p class="mx-auto max-w-4xl text-xl leading-relaxed text-gray-600">
+        Un <strong>CRM personnalisé avec Airtable</strong> centralise et automatise la gestion de vos
+        relations clients. Découvrez la différence entre gérer manuellement et avoir un système optimisé.
       </p>
     </div>
-    <div class="grid md:grid-cols-2 gap-12">
-      <div class="bg-gray-50 p-8 rounded-2xl">
-        <h3 class="text-2xl font-bold mb-6 text-red-500">Avant</h3>
-        <ul class="space-y-4">
-          <li class="flex items-start">
-            <span class="text-red-500 mr-2">×</span>
-            <p>Perte de temps dans la gestion manuelle</p>
-          </li>
-          <li class="flex items-start">
-            <span class="text-red-500 mr-2">×</span>
-            <p>Erreurs de suivi des clients</p>
-          </li>
-          <li class="flex items-start">
-            <span class="text-red-500 mr-2">×</span>
-            <p>Communication désorganisée</p>
-          </li>
-        </ul>
+
+    <!-- Comparaison avant/après avec animation -->
+    <div class="relative">
+      <!-- Flèche de transformation -->
+      <div
+        class="absolute left-1/2 top-1/2 z-20 hidden -translate-x-1/2 -translate-y-1/2 transform lg:block"
+      >
+        <div class="rounded-full border-4 border-orange-200 bg-white p-4 shadow-xl">
+          <svg
+            class="transform-arrow h-8 w-8 text-orange-500"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="3"
+              d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+          </svg>
+        </div>
       </div>
-      <div class="bg-zest-50 p-8 rounded-2xl">
-        <h3 class="text-2xl font-bold mb-6 text-green-500">Après</h3>
-        <ul class="space-y-4">
-          <li class="flex items-start">
-            <span class="text-green-500 mr-2">✓</span>
-            <p>Automatisation des tâches répétitives</p>
-          </li>
-          <li class="flex items-start">
-            <span class="text-green-500 mr-2">✓</span>
-            <p>Suivi client centralisé et efficace</p>
-          </li>
-          <li class="flex items-start">
-            <span class="text-green-500 mr-2">✓</span>
-            <p>Communication professionnelle automatisée</p>
-          </li>
-        </ul>
+
+      <div class="grid items-stretch gap-8 lg:grid-cols-2 lg:gap-12">
+        <!-- Avant -->
+        <div
+          class="before-card relative rounded-2xl border border-red-100 bg-white shadow-xl"
+        >
+          <!-- Badge problème -->
+          <div class="absolute -top-3 left-6 z-10">
+            <div
+              class="flex items-center gap-2 rounded-full bg-red-500 px-4 py-2 text-sm font-semibold text-white"
+            >
+              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Situation actuelle
+            </div>
+          </div>
+
+          <div class="p-8 pt-12">
+            <h3 class="mb-6 flex items-center gap-3 text-2xl font-bold text-red-600 lg:text-3xl">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Avant le CRM
+            </h3>
+
+            <!-- Problèmes avec animations -->
+            <div class="space-y-5">
+              <div
+                class="problem-item flex items-start rounded-xl border border-red-100 bg-red-50 p-4"
+              >
+                <div
+                  class="mr-4 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-red-500"
+                >
+                  <svg
+                    class="h-5 w-5 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="mb-2 font-semibold text-red-900">Perte de temps critique</h4>
+                  <p class="text-sm leading-relaxed text-red-700">
+                    <strong>2-3 heures par jour</strong> perdues dans la gestion manuelle : recherche
+                    d'infos, mise à jour de tableaux Excel, relances oubliées.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="problem-item flex items-start rounded-xl border border-red-100 bg-red-50 p-4"
+              >
+                <div
+                  class="mr-4 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-red-500"
+                >
+                  <svg
+                    class="h-5 w-5 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="mb-2 font-semibold text-red-900">Erreurs de suivi coûteuses</h4>
+                  <p class="text-sm leading-relaxed text-red-700">
+                    Clients qui passent entre les mailles, <strong>relances en retard</strong>,
+                    opportunités perdues par manque de suivi systématique.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="problem-item flex items-start rounded-xl border border-red-100 bg-red-50 p-4"
+              >
+                <div
+                  class="mr-4 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-red-500"
+                >
+                  <svg
+                    class="h-5 w-5 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="mb-2 font-semibold text-red-900">Communication désorganisée</h4>
+                  <p class="text-sm leading-relaxed text-red-700">
+                    Emails éparpillés, <strong>historique client inexistant</strong>, informations
+                    perdues entre collègues, image peu professionnelle.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="problem-item flex items-start rounded-xl border border-red-100 bg-red-50 p-4"
+              >
+                <div
+                  class="mr-4 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-red-500"
+                >
+                  <svg
+                    class="h-5 w-5 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="mb-2 font-semibold text-red-900">Aucune visibilité business</h4>
+                  <p class="text-sm leading-relaxed text-red-700">
+                    <strong>Impossible de prévoir</strong> le chiffre d'affaires, pas de statistiques
+                    fiables, décisions prises à l'aveugle.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Coût du problème -->
+            <div class="mt-8 rounded-xl bg-red-100 p-6 text-center">
+              <div class="mb-2 text-2xl font-bold text-red-900">-30% CA</div>
+              <div class="text-sm text-red-700">potentiel perdu par manque d'organisation</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Après -->
+        <div
+          class="after-card relative rounded-2xl border border-green-200 bg-gradient-to-br from-green-50 to-emerald-50 shadow-xl"
+        >
+          <!-- Badge solution -->
+          <div class="absolute -top-3 left-6 z-10">
+            <div
+              class="flex items-center gap-2 rounded-full bg-green-500 px-4 py-2 text-sm font-semibold text-white"
+            >
+              <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fill-rule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                  clip-rule="evenodd"></path>
+              </svg>
+              Avec votre CRM
+            </div>
+          </div>
+
+          <div class="p-8 pt-12">
+            <h3 class="mb-6 flex items-center gap-3 text-2xl font-bold text-green-600 lg:text-3xl">
+              <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+              </svg>
+              Après le CRM
+            </h3>
+
+            <!-- Solutions avec animations -->
+            <div class="space-y-5">
+              <div
+                class="solution-item flex items-start rounded-xl border border-green-200 bg-green-100 p-4"
+              >
+                <div
+                  class="mr-4 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-500"
+                >
+                  <svg
+                    class="h-5 w-5 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="mb-2 font-semibold text-green-900">Automatisation intelligente</h4>
+                  <p class="text-sm leading-relaxed text-green-700">
+                    <strong>Relances automatiques</strong>, emails programmés, rappels RDV. Plus
+                    besoin de se rappeler de tout : le système travaille pour vous.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="solution-item flex items-start rounded-xl border border-green-200 bg-green-100 p-4"
+              >
+                <div
+                  class="mr-4 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-500"
+                >
+                  <svg
+                    class="h-5 w-5 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="mb-2 font-semibold text-green-900">Suivi client centralisé</h4>
+                  <p class="text-sm leading-relaxed text-green-700">
+                    <strong>Historique complet</strong> de chaque client en un clic. Toute l'équipe accède
+                    aux mêmes informations actualisées.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="solution-item flex items-start rounded-xl border border-green-200 bg-green-100 p-4"
+              >
+                <div
+                  class="mr-4 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-500"
+                >
+                  <svg
+                    class="h-5 w-5 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="mb-2 font-semibold text-green-900">Communication professionnelle</h4>
+                  <p class="text-sm leading-relaxed text-green-700">
+                    <strong>Templates d'emails</strong>, signatures automatiques, communication
+                    cohérente qui renforce votre image de marque.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="solution-item flex items-start rounded-xl border border-green-200 bg-green-100 p-4"
+              >
+                <div
+                  class="mr-4 flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-green-500"
+                >
+                  <svg
+                    class="h-5 w-5 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div>
+                  <h4 class="mb-2 font-semibold text-green-900">Tableaux de bord en temps réel</h4>
+                  <p class="text-sm leading-relaxed text-green-700">
+                    <strong>KPIs instantanés</strong> : CA prévisionnel, taux de conversion, pipeline.
+                    Pilotez votre business avec des données concrètes.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bénéfices obtenus -->
+            <div class="mt-8 rounded-xl border-2 border-green-300 bg-white p-6 text-center">
+              <div class="mb-2 text-2xl font-bold text-green-600">+25% CA</div>
+              <div class="text-sm text-green-700">amélioration moyenne constatée</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CTA de transition -->
+    <div class="mt-16 text-center">
+      <div
+        class="rounded-2xl bg-gradient-to-r from-orange-500 to-orange-600 p-8 text-white lg:p-12"
+      >
+        <h3 class="mb-4 text-2xl font-bold lg:text-3xl">Prêt à transformer votre business ?</h3>
+        <p class="mx-auto mb-8 max-w-2xl text-xl opacity-90">
+          Rejoignez les 100+ entrepreneurs qui ont révolutionné leur gestion client
+        </p>
+        <button
+          onclick="bookMeeting()"
+          class="transform rounded-xl bg-white px-8 py-4 text-lg font-semibold text-orange-600 shadow-lg transition-all duration-300 hover:scale-105 hover:bg-gray-50"
+        >
+          Découvrir comment créer mon CRM
+        </button>
       </div>
     </div>
   </div>
 </section>
 
 <style>
-.gradient-text {
-  background: linear-gradient(135deg, #f97316, #ea580c);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-</style> 
+  .gradient-text {
+    background: linear-gradient(135deg, #f97316, #ea580c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Éléments décoratifs animés */
+  .transform-element {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #f97316, #ea580c);
+    animation: transformFloat 8s ease-in-out infinite;
+  }
+
+  .element-1 {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+  }
+
+  .element-2 {
+    width: 60px;
+    height: 60px;
+    top: 70%;
+    right: 10%;
+    animation-delay: 3s;
+  }
+
+  .element-3 {
+    width: 80px;
+    height: 80px;
+    bottom: 10%;
+    left: 20%;
+    animation-delay: 6s;
+  }
+
+  @keyframes transformFloat {
+    0%,
+    100% {
+      transform: translateY(0) scale(1) rotate(0deg);
+    }
+    33% {
+      transform: translateY(-20px) scale(1.1) rotate(120deg);
+    }
+    66% {
+      transform: translateY(10px) scale(0.9) rotate(240deg);
+    }
+  }
+
+  /* Animation de la flèche */
+  .transform-arrow {
+    animation: arrowPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes arrowPulse {
+    0%,
+    100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+  }
+
+  /* Animations des cartes */
+  .before-card,
+  .after-card {
+    animation: slideInCard 0.8s ease-out;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .after-card {
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+  }
+
+  .before-card:hover,
+  .after-card:hover {
+    transform: translateY(-8px);
+  }
+
+  @keyframes slideInCard {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Animations des items */
+  .problem-item,
+  .solution-item {
+    animation: fadeInItem 0.6s ease-out;
+    animation-fill-mode: both;
+    transition: transform 0.2s ease;
+  }
+
+  .problem-item:hover,
+  .solution-item:hover {
+    transform: translateX(5px);
+  }
+
+  .problem-item:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .problem-item:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .problem-item:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .problem-item:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  .solution-item:nth-child(1) {
+    animation-delay: 0.5s;
+  }
+  .solution-item:nth-child(2) {
+    animation-delay: 0.6s;
+  }
+  .solution-item:nth-child(3) {
+    animation-delay: 0.7s;
+  }
+  .solution-item:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+
+  @keyframes fadeInItem {
+    from {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Animation des métriques */
+  .metric-item {
+    animation: bounceInMetric 0.8s ease-out;
+    animation-fill-mode: both;
+  }
+
+  .metric-item:nth-child(1) {
+    animation-delay: 0.2s;
+  }
+  .metric-item:nth-child(2) {
+    animation-delay: 0.4s;
+  }
+  .metric-item:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  .metric-item:nth-child(4) {
+    animation-delay: 0.8s;
+  }
+
+  @keyframes bounceInMetric {
+    0% {
+      opacity: 0;
+      transform: scale(0.3);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+    70% {
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .transform-arrow {
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .before-card,
+    .after-card {
+      padding: 1.5rem;
+    }
+
+    .problem-item,
+    .solution-item {
+      padding: 1rem;
+    }
+
+    .transform-element {
+      display: none;
+    }
+
+    .metric-item {
+      margin-bottom: 2rem;
+    }
+  }
+
+  /* Animation au scroll */
+  @media (prefers-reduced-motion: no-preference) {
+    .before-card,
+    .after-card {
+      opacity: 0;
+    }
+  }
+</style>
+
+<script>
+  function bookMeeting() {
+    window.location.href = 'https://calendly.com/olivierdemontant/30min';
+  }
+
+  // Animation au scroll pour les éléments
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px',
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.style.animationPlayState = 'running';
+        entry.target.style.opacity = '1';
+      }
+    });
+  }, observerOptions);
+
+  // Initialiser les observers au chargement
+  document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll(
+      '.before-card, .after-card, .problem-item, .solution-item, .metric-item'
+    );
+
+    animatedElements.forEach((el) => {
+      observer.observe(el);
+    });
+
+    // Animation du compteur pour les métriques
+    const counterElements = document.querySelectorAll('.metric-item .text-3xl');
+
+    const animateCounter = (element, target) => {
+      const isPercentage = target.includes('%');
+      const isTime = target.includes('h');
+      const numericTarget = parseInt(target.replace(/[^0-9]/g, ''));
+
+      let current = 0;
+      const increment = numericTarget / 50; // 50 étapes d'animation
+
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= numericTarget) {
+          current = numericTarget;
+          clearInterval(timer);
+        }
+
+        let displayValue = Math.floor(current);
+        if (isPercentage) displayValue += '%';
+        if (isTime) displayValue += 'h';
+        if (target === '100%') displayValue = Math.floor(current) + '%';
+        if (target.includes('-'))
+          displayValue = Math.floor(current) + '-' + (Math.floor(current) + 1) + 'h';
+
+        element.textContent = displayValue;
+      }, 20);
+    };
+
+    // Observer pour les métriques avec animation de compteur
+    const metricsObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !entry.target.dataset.animated) {
+            const counterEl = entry.target.querySelector('.text-3xl');
+            const targetValue = counterEl.textContent;
+            entry.target.dataset.animated = 'true';
+
+            setTimeout(() => {
+              animateCounter(counterEl, targetValue);
+            }, 500);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    document.querySelectorAll('.metric-item').forEach((el) => {
+      metricsObserver.observe(el);
+    });
+  });
+</script>
